@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/styles/index.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 600px)"
+      href="/styles/mobile.css"
+    />
+    <title>Portfólio | Carlos Miguel</title>
+    <link rel="icon" href="/images/icon.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="/scripts/index.js" type="text/javascript" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.2.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.2.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.2.0/uicons-brands/css/uicons-brands.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <div id="navbar">
+      <ul>
+        <li class="li-navbar">
+          <button onclick="rolarHome()" class="btn-navbar">
+            <i class="fi fi-rr-home"></i>
+          </button>
+        </li>
+
+        <li class="li-navbar">
+          <button onclick="rolarHome()" class="btn-navbar">Sobre</button>
+        </li>
+
+        <li class="li-navbar">
+          <button onclick="rolarPort()" class="btn-navbar">Portfólio</button>
+        </li>
+
+        <li class="li-navbar">
+          <button onclick="rolarContato()" class="btn-navbar">Contato</button>
+        </li>
+
+        <li class="li-navbar">
+          <button onclick="lightMode()" class="btn-navbar">
+            <i class="fi fi-rr-bulb"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <div id="container">
+      <div class="aparecer">
+        <div class="sobre">
+          <div id="title-sobre">
+            <h2 id="js-title-sobre"></h2>
+          </div>
+          <div class="container-sobre">
+            <div class="p-sobre">
+              <p>
+                👋 Olá! Me chamo Carlos Miguel, tenho 18 anos e sou apaixonado
+                pela tecnologia desde pequeno.
+              </p>
+              <p>
+                🎓 Atualmente, estou navegando pelo mundo da Ciência da
+                Computação na UNESC, onde estou constantemente aprimorando
+                minhas habilidades e conhecimentos nesta fascinante área.
+              </p>
+              <p>
+                🚀 Sou um entusiasta de projetos de desenvolvimento web e estou
+                sempre em busca de novos desafios para expandir meu horizonte
+                profissional. Acredito firmemente na importância de aprender
+                continuamente e estou sempre explorando novas tecnologias e
+                tendências do mercado.
+              </p>
+              <p>
+                🎯 Meu objetivo? Contribuir de forma significativa para a
+                inovação e o progresso no campo da computação, enquanto me
+                esforço para alcançar meus objetivos pessoais e profissionais.
+              </p>
+            </div>
+
+            <div class="img-sobre">
+              <img
+                src="images/Perfil.jpg"
+                alt="Foto Perfil"
+                width="300"
+                height="300"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="aparecer">
+        <div class="portfolio">
+          <div id="title-portfolio">
+            <h2>Portfólio</h2>
+          </div>
+          <div class="container-portfolio">
+            <div class="title-portfolio-projetos">
+              <p>🚀 Projetos de Desenvolvimento</p>
+            </div>
+            <div class="flex">
+              <div class="container-portfolio-projetos">
+                <p>
+                  🌐 Site Pessoal: Desenvolvi um site pessoal utilizando HTML,
+                  CSS e JavaScript para demonstrar minhas habilidades em
+                  front-end. Ver Projeto.
+                </p>
+                <p>
+                  💻 Aplicações em C: Explorei conceitos avançados em C, criando
+                  diversas aplicações e exercitando meu conhecimento na
+                  linguagem. Ver Projeto.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="aparecer">
+            <div class="title-portfolio-cursos">
+              <p>📚 Cursos</p>
+            </div>
+            <div class="flex">
+              <div class="container-portfolio-cursos">
+                <p>
+                  🎓 CS50, Harvard<br />
+                  Concluí com sucesso o curso CS50, da Universidade de Harvard,
+                  ampliando meu conhecimento em ciência da computação e
+                  resolução de problemas.
+                </p>
+                <p>
+                  🛠️ Desenvolvimento Web Completo, Udemy<br />Concluí o curso
+                  Desenvolvimento Web Completo na Udemy, onde aprofundei meus
+                  conhecimentos em HTML, CSS, JavaScript e frameworks modernos.
+                </p>
+                <p>
+                  💻 DevTheDevs, PUCRS<br />
+                  Participei do programa DevTheDevs na PUCRS, aprimorando minhas
+                  habilidades em desenvolvimento de software e colaboração em
+                  equipe.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="aparecer">
+            <div class="title-portfolio-exp">
+              <p>💼 Experiência</p>
+            </div>
+            <div class="flex">
+              <div class="container-portfolio-exp">
+                <p>
+                  Como técnico de informática, trabalhei por um ano em
+                  manutenção de computadores, sistemas, redes e impressoras.
+                  Responsabilidades incluíam diagnóstico e resolução de
+                  problemas de hardware e software, instalação e configuração de
+                  sistemas operacionais e suporte aos usuários. Adquiri
+                  habilidades em comunicação e resolução de problemas,
+                  fortalecendo minha paixão pela tecnologia.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="aparecer">
+            <div class="title-portfolio-extra">
+              <p>🏆 Conquistas Acadêmicas</p>
+            </div>
+            <div class="flex">
+              <div class="container-portfolio-extra">
+                <p>
+                  3 Menções Honrosas OBMEP: Recebi três menções honrosas na
+                  Olimpíada Brasileira de Matemática das Escolas Públicas
+                  (OBMEP), demonstrando meu comprometimento e habilidades
+                  analíticas.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="aparecer">
+            <div class="title-portfolio-extra">
+              <p>🔗 GitHub</p>
+            </div>
+            <div class="flex">
+              <div class="container-portfolio-extra">
+                <p>
+                  Confira todos os meus projetos e contribuições no GitHub:
+                  <a href="https://github.com/ckzwebber" target="_blank">
+                    GitHub</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="aparecer">
+        <div class="contato">
+          <div id="title-contato">
+            <h2>Contato</h2>
+          </div>
+          <div class="container-contato">
+            <div class="p-contato">
+              <p>📧 E-mail: kacowebber12@outlook.com</p>
+              <p>🔗 LinkedIn: https://www.linkedin.com/in/cmiguelwm/</p>
+              <br />
+              <p>
+                Fique à vontade para entrar em contato comigo por e-mail ou
+                através do LinkedIn. Estou sempre aberto a novas oportunidades
+                de colaboração e networking. Obrigado pela visita!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="copy">
+        <p>
+          Copyright © 2024 Carlos Miguel. Todos os direitos reservados. <br />🌎
+          Criciúma, SC, Brasil 🇧🇷.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
