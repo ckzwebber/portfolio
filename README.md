@@ -9,9 +9,9 @@
   <h2>Conteúdo</h2>
 
   <ul>
-    <li>🚀 <strong>Projetos de Desenvolvimento:</strong> Explore uma coleção diversificada de projetos que demonstrem minhas habilidades em desenvolvimento de software, incluindo desenvolvimento web, aplicações em C/C++, e muito mais.</li>
+    <li>🚀 <strong>Projetos de Desenvolvimento:</strong> Explore uma coleção diversificada de projetos que demonstrem minhas habilidades em desenvolvimento de software, incluindo desenvolvimento web e aplicações em C/C++.</li>
     <li>🎓 <strong>Formação Acadêmica:</strong> Saiba mais sobre minha trajetória acadêmica, cursos relevantes e conquistas acadêmicas.</li>
-    <li>💼 <strong>Experiência Profissional:</strong> Descubra detalhes sobre minha experiência profissional, incluindo estágios, trabalhos freelance e outras oportunidades de trabalho.</li>
+    <li>💼 <strong>Experiência Profissional:</strong> Descubra detalhes sobre minha experiência profissional.</li>
   </ul>
 
   <h2>Como Contribuir</h2>
