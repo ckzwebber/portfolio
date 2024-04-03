@@ -1,10 +1,10 @@
-<h1>Portfolio de Desenvolvimento - Carlos Miguel</h1>
+<h1>Portfólio de Desenvolvimento - Carlos Miguel</h1>
 
-  <p>Bem-vindo ao meu portfolio de desenvolvimento! Este repositório contém o código-fonte do meu site pessoal, onde compartilho meus projetos, conquistas e experiências relacionadas ao desenvolvimento de software.</p>
+  <p>Bem-vindo ao meu portfólio de desenvolvimento! Este repositório contém o código-fonte do meu site pessoal, onde compartilho meus projetos, conquistas e experiências relacionadas ao desenvolvimento de software.</p>
 
   <h2>Visão Geral</h2>
 
-  <p>Meu portfolio é uma vitrine digital que apresenta meu percurso como estudante de Ciência da Computação na UNESC e minha paixão pela tecnologia. Aqui você encontrará uma variedade de projetos desenvolvidos por mim, desde trabalhos acadêmicos até projetos pessoais, bem como detalhes sobre minha formação acadêmica e conquistas profissionais.</p>
+  <p>Meu portfólio é uma vitrine digital que apresenta meu percurso como estudante de Ciência da Computação na UNESC e minha paixão pela tecnologia. Aqui você encontrará uma variedade de projetos desenvolvidos por mim, desde trabalhos acadêmicos até projetos pessoais, bem como detalhes sobre minha formação acadêmica e conquistas profissionais.</p>
 
   <h2>Conteúdo</h2>
 
@@ -16,7 +16,7 @@
 
   <h2>Como Contribuir</h2>
 
-  <p>Se você tiver alguma sugestão de melhoria para o meu portfolio ou encontrar algum problema, fique à vontade para abrir uma issue ou enviar um pull request. Sua contribuição é sempre bem-vinda!</p>
+  <p>Se você tiver alguma sugestão de melhoria para o meu portfólio ou encontrar algum problema, fique à vontade para abrir uma issue ou enviar um pull request. Sua contribuição é sempre bem-vinda!</p>
 
   <h2>Contato</h2>
 
@@ -27,4 +27,4 @@
     <li>E-mail: <a href="mailto:kacowebber12@outlook.com">kacowebber12@outlook.com</a></li>
   </ul>
 
-  <p>Obrigado por visitar meu portfolio! Espero que você goste do que vê.</p>
+  <p>Obrigado por visitar meu portfólio! Espero que você goste do que vê.</p>
