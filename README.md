@@ -23,8 +23,8 @@
   <p>Se você quiser entrar em contato comigo para discutir oportunidades de colaboração ou simplesmente para trocar ideias, você pode me encontrar no LinkedIn ou via e-mail.</p>
 
   <ul>
-    <li>LinkedIn: <a href="link_do_perfil_LinkedIn">Carlos Miguel</a></li>
-    <li>E-mail: <a href="mailto:carlosmiguel@email.com">carlosmiguel@email.com</a></li>
+    <li>LinkedIn: <a href="https://www.linkedin.com/in/cmiguelwm/">Carlos Miguel</a></li>
+    <li>E-mail: <a href="mailto:kacowebber12@outlook.com">kacowebber12@outlook.com</a></li>
   </ul>
 
   <p>Obrigado por visitar meu portfolio! Espero que você goste do que vê.</p>
