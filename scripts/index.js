@@ -18,27 +18,27 @@ function rolarHome() {
 }
 
 function rolarPort() {
-  var conteudo = document.getElementById("title-portfolio");
-  var offset = conteudo.getBoundingClientRect().top + window.scrollY + 120;
+  let conteudo = document.getElementById("title-portfolio");
+  let offset = conteudo.getBoundingClientRect().top + window.scrollY + 120;
   window.scrollTo({ top: offset, behavior: "smooth" });
 }
 
 function rolarContato() {
-  var conteudo = document.getElementById("title-contato");
+  let conteudo = document.getElementById("title-contato");
   conteudo.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 function lightMode() {
-  var content = document.querySelector(".container");
+  let content = document.querySelector(".container");
   container.classList.toggle("light-mode");
 }
 
 function verificarVisibilidade() {
-  var elementos = document.querySelectorAll(".aparecer");
+  let elementos = document.querySelectorAll(".aparecer");
 
   elementos.forEach(function (elemento) {
-    var posicao = elemento.getBoundingClientRect();
-    var alturaDaJanela =
+    let posicao = elemento.getBoundingClientRect();
+    let alturaDaJanela =
       window.innerHeight || document.documentElement.clientHeight;
 
     if (posicao.top <= alturaDaJanela * 0.65) {
@@ -51,9 +51,9 @@ window.addEventListener("load", verificarVisibilidade);
 window.addEventListener("scroll", verificarVisibilidade);
 
 function digitarTexto(texto, idElemento) {
-  var textoAtual = "";
-  var indice = 0;
-  var cursorElemento = document.getElementById(idElemento);
+  let textoAtual = "";
+  let indice = 0;
+  let cursorElemento = document.getElementById(idElemento);
 
   function atualizarTexto() {
     if (indice < texto.length) {
