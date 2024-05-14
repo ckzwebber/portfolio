@@ -157,7 +157,8 @@ a {
   justify-content: center;
 }
 
-.container-portfolio-cursos {
+.container-portfolio-cursos,
+.bootcamp {
   display: block;
   text-align: center;
   margin-left: auto;
