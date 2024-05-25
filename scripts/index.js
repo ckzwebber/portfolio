@@ -69,4 +69,4 @@ function digitarTexto(texto, idElemento) {
 
   atualizarTexto();
 }
-digitarTexto("Sobre mim", "js-title-sobre");
+digitarTexto("Frontend Devloper", "js-title-sobre");
