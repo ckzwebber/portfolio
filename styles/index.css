@@ -12,7 +12,7 @@
 
 a {
   text-decoration: none;
-  color: rgb(77, 66, 230);
+  color: #0099ff;
 }
 
 .aparecer {
@@ -27,7 +27,7 @@ a {
 #navbar {
   list-style: none;
   width: 100%;
-  background: #1c1c1c;
+  background: #051119;
   text-align: center;
   font-size: 0;
   transition: top 0.3s ease-in-out;
@@ -41,11 +41,11 @@ a {
 
 .btn-navbar {
   display: block;
-  padding: 1.5em 4em;
+  padding: 1em 5em;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 15px;
   color: #ffff;
-  background-color: #1c1c1c;
+  background-color: #051119;
   transition: all 0.5s ease;
   border: none;
   border-radius: none;
@@ -53,12 +53,12 @@ a {
 
 .li-navbar button:hover {
   background: #ffff;
-  color: #1c1c1c;
+  color: #051119;
   cursor: pointer;
 }
 
 #container {
-  padding-top: 7%;
+  padding-top: 9%;
   background-image: url("../images/back.jpg");
   background-attachment: fixed;
   background-position: center;
@@ -70,8 +70,7 @@ a {
 }
 
 #container.light-mode {
-  background-color: #ffff;
-  color: black;
+  color: #051119;
 }
 
 .fix {
