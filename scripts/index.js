@@ -28,11 +28,6 @@ function rolarContato() {
   conteudo.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-function lightMode() {
-  var content = document.querySelector(".container");
-  container.classList.toggle("light-mode");
-}
-
 function verificarVisibilidade() {
   var elementos = document.querySelectorAll(".aparecer");
 

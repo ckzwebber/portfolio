@@ -35,18 +35,6 @@
       rel="stylesheet"
     />
     <script src="/scripts/index.js" type="text/javascript" defer></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn-uicons.flaticon.com/2.2.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn-uicons.flaticon.com/2.2.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn-uicons.flaticon.com/2.2.0/uicons-brands/css/uicons-brands.css"
-    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
 
@@ -75,18 +63,12 @@
         <li class="li-navbar">
           <button onclick="rolarContato()" class="btn-navbar">Contato</button>
         </li>
-
-        <li class="li-navbar">
-          <button onclick="lightMode()" class="btn-navbar">
-            <i class="fi fi-rr-bulb"></i>
-          </button>
-        </li>
       </ul>
     </div>
 
     <div id="container">
       <div class="aparecer">
-        <div class="fix">
+        <div class="fix-sobre">
           <div class="sobre">
             <div id="title-sobre">
               <h2 id="js-title-sobre"></h2>
@@ -122,58 +104,65 @@
         </div>
       </div>
       <div class="aparecer">
-        <div class="portfolio">
-          <div id="title-portfolio">
-            <h2>Portfólio</h2>
-          </div>
-          <div class="container-portfolio">
-            <div class="title-portfolio-projetos">
-              <p>Projetos de Desenvolvimento</p>
+        <div class="fix-projetos">
+          <div class="projetos">
+            <div id="title-portfolio">
+              <h2>Portfólio</h2>
             </div>
-            <div class="flex">
-              <div class="container-portfolio-projetos">
-                <p>
-                  Site Pessoal: Desenvolvi esse site pessoal utilizando HTML,
-                  CSS e JavaScript para demonstrar minhas habilidades em
-                  front-end.
-                  <a
-                    href="https://github.com/ckzwebber/Portfolio-CarlosMiguel"
-                    target="_blank"
-                    >Ver Projeto</a
-                  >.
-                </p>
-                <p>
-                  Aplicações em C: Explorei conceitos avançados em C, criando
-                  diversas aplicações e exercitando meu conhecimento na
-                  linguagem.
-                  <a
-                    href="https://github.com/ckzwebber/Projetos-Faculdade-C-e-Cpp"
-                    target="_blank"
-                    >Ver Projeto</a
-                  >.
-                </p>
+            <div class="container-projetos">
+              <div class="title-projetos">
+                <p>Projetos de Desenvolvimento</p>
+              </div>
+              <div class="flex">
+                <div class="p-projetos">
+                  <p>
+                    Site Pessoal: Desenvolvi esse site pessoal utilizando HTML,
+                    CSS e JavaScript para demonstrar minhas habilidades em
+                    front-end.
+                    <a
+                      href="https://github.com/ckzwebber/Portfolio-CarlosMiguel"
+                      target="_blank"
+                      >Ver Projeto</a
+                    >.
+                  </p>
+                  <p>
+                    Aplicações em C: Explorei conceitos avançados em C, criando
+                    diversas aplicações e exercitando meu conhecimento na
+                    linguagem.
+                    <a
+                      href="https://github.com/ckzwebber/Projetos-Faculdade-C-e-Cpp"
+                      target="_blank"
+                      >Ver Projeto</a
+                    >.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="aparecer">
-            <div class="title-portfolio-cursos">
-              <p>📚 Cursos</p>
+        </div>
+      </div>
+
+      <div class="aparecer">
+        <div class="fix-cursos">
+          <div class="cursos">
+            <div class="title-cursos">
+              <p>Cursos</p>
             </div>
             <div class="flex">
-              <div class="container-portfolio-cursos">
+              <div class="container-cursos">
                 <p>
-                  🎓 CS50, Harvard<br />
+                  CS50, Harvard<br />
                   Concluí com sucesso o curso CS50, da Universidade de Harvard,
                   ampliando meu conhecimento em ciência da computação e
                   resolução de problemas.
                 </p>
                 <p>
-                  🛠️ Desenvolvimento Web Completo, Udemy<br />Concluí o curso
+                  Desenvolvimento Web Completo, Udemy<br />Concluí o curso
                   Desenvolvimento Web Completo na Udemy, onde aprofundei meus
                   conhecimentos em HTML, CSS, JavaScript e frameworks modernos.
                 </p>
                 <p>
-                  💻 DevTheDevs, PUCRS<br />
+                  DevTheDevs, PUCRS<br />
                   Participei do programa DevTheDevs na PUCRS, aprimorando minhas
                   habilidades em desenvolvimento de software e colaboração em
                   equipe.
@@ -181,53 +170,51 @@
               </div>
             </div>
           </div>
-          <div class="aparecer">
-            <div class="title-portfolio-exp">
-              <p>💼 Experiência</p>
-            </div>
-            <div class="flex">
-              <div class="container-portfolio-exp">
-                <p>
-                  Como técnico de informática, trabalhei por um ano em
-                  manutenção de computadores, sistemas, redes e impressoras.
-                  Responsabilidades incluíam diagnóstico e resolução de
-                  problemas de hardware e software, instalação e configuração de
-                  sistemas operacionais e suporte aos usuários. Adquiri
-                  habilidades em comunicação e resolução de problemas,
-                  fortalecendo minha paixão pela tecnologia.
-                </p>
-              </div>
-            </div>
+        </div>
+      </div>
+
+      <div class="aparecer">
+        <div class="title-portfolio-exp">
+          <p>Experiência</p>
+        </div>
+        <div class="flex">
+          <div class="container-portfolio-exp">
+            <p>
+              Como técnico de informática, trabalhei por um ano em manutenção de
+              computadores, sistemas, redes e impressoras. Responsabilidades
+              incluíam diagnóstico e resolução de problemas de hardware e
+              software, instalação e configuração de sistemas operacionais e
+              suporte aos usuários. Adquiri habilidades em comunicação e
+              resolução de problemas, fortalecendo minha paixão pela tecnologia.
+            </p>
           </div>
-          <div class="aparecer">
-            <div class="title-portfolio-extra">
-              <p>🏆 Conquistas Acadêmicas</p>
-            </div>
-            <div class="flex">
-              <div class="container-portfolio-extra">
-                <p>
-                  3 Menções Honrosas OBMEP: Recebi três menções honrosas na
-                  Olimpíada Brasileira de Matemática das Escolas Públicas
-                  (OBMEP), demonstrando meu comprometimento e habilidades
-                  analíticas.
-                </p>
-              </div>
-            </div>
+        </div>
+      </div>
+      <div class="aparecer">
+        <div class="title-portfolio-extra">
+          <p>Conquistas Acadêmicas</p>
+        </div>
+        <div class="flex">
+          <div class="container-portfolio-extra">
+            <p>
+              3 Menções Honrosas OBMEP: Recebi três menções honrosas na
+              Olimpíada Brasileira de Matemática das Escolas Públicas (OBMEP),
+              demonstrando meu comprometimento e habilidades analíticas.
+            </p>
           </div>
-          <div class="aparecer">
-            <div class="title-portfolio-extra">
-              <p>🔗 GitHub</p>
-            </div>
-            <div class="flex">
-              <div class="container-portfolio-extra">
-                <p>
-                  Confira todos os meus projetos e contribuições no
-                  <a href="https://github.com/ckzwebber" target="_blank">
-                    GitHub</a
-                  >.
-                </p>
-              </div>
-            </div>
+        </div>
+      </div>
+      <div class="aparecer">
+        <div class="title-portfolio-extra">
+          <p>GitHub</p>
+        </div>
+        <div class="flex">
+          <div class="container-portfolio-extra">
+            <p>
+              Confira todos os meus projetos e contribuições no
+              <a href="https://github.com/ckzwebber" target="_blank"> GitHub</a
+              >.
+            </p>
           </div>
         </div>
       </div>
@@ -240,7 +227,7 @@
           <div class="container-contato">
             <div class="p-contato">
               <p>
-                🔗 LinkedIn:
+                LinkedIn:
                 <a
                   href="https://www.linkedin.com/in/cmiguelwm/"
                   target="_blank"
@@ -249,7 +236,7 @@
                 </a>
               </p>
               <p>
-                📧 E-mail:
+                E-mail:
                 <a href="mailto:kacowebber12@outlook.com">
                   kacowebber12@outlook.com</a
                 >

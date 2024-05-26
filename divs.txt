@@ -1,0 +1,32 @@
+adicionar cards projetos
+adicionar tecnologias quadrados
+arrumar divs html
+arrumar css 
+arrumar css mobile
+arrumar textos
+padronizar js
+https://uiverse.io/JaydipPrajapati1910/bitter-fireant-97
+
+aparecer class
+fix-sobre class
+sobre class
+title-sobre id
+container-sobre cass
+p-sobre class
+img-sobre class
+
+aparecer class
+fix-projetos class
+projetos class
+title-portoflio id
+container-projetos class
+title-projetos class
+flex class
+p-projetos class
+
+aparecer class
+fix-cursos class
+cursos class
+title-cursos
+flex class
+container-cursos
