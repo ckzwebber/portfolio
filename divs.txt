@@ -1,29 +1,19 @@
-adicionar cards projetos
 adicionar tecnologias quadrados
-arrumar divs html
-arrumar css 
 arrumar css mobile
-arrumar textos
 padronizar js
-https://uiverse.io/JaydipPrajapati1910/bitter-fireant-97
 
-aparecer class
-fix-sobre class
-sobre class
-title-sobre id
-container-sobre class
-p-sobre class
-img-sobre class
 
-aparecer class
+
 fix-projetos class
 projetos class
 container-projetos class
 title-projetos id
 flex class
 p-projetos class
+p-1 class
+p-2 class
 
-aparecer class
+
 fix-cursos class
 cursos class
 title-cursos id
@@ -31,7 +21,7 @@ container-cursos class
 flex class
 p-cursos class
 
-aparacer class
+
 fix-exp class
 exp class
 title-exp id
@@ -39,7 +29,7 @@ container-exp class
 flex class
 p-exp class
 
-aparacer class
+
 fix-conquistas class
 conquistas class
 title-conquistas id
