@@ -69,10 +69,6 @@ a {
   transition: all 0.5s ease;
 }
 
-#container.light-mode {
-  color: #051119;
-}
-
 .fix-sobre {
   display: flex;
   justify-content: center;
@@ -107,27 +103,23 @@ a {
   height: auto;
 }
 
-.fix-port {
+.fix-projetos {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.portfolio {
+.projetos {
+  max-width: 1050px;
   align-items: center;
 }
 
-#title-portfolio {
-  font-size: 30px;
-  padding-bottom: 30px;
-
-  padding-top: 12%;
-}
-
-.title-portfolio-projetos {
+.title-projetos {
   display: flex;
+  justify-content: center;
   font-size: 30px;
   padding-bottom: 30px;
+  padding-top: 12%;
 }
 
 .flex {

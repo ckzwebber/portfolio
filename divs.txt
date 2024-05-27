@@ -11,22 +11,38 @@ aparecer class
 fix-sobre class
 sobre class
 title-sobre id
-container-sobre cass
+container-sobre class
 p-sobre class
 img-sobre class
 
 aparecer class
 fix-projetos class
 projetos class
-title-portoflio id
 container-projetos class
-title-projetos class
+title-projetos id
 flex class
 p-projetos class
 
 aparecer class
 fix-cursos class
 cursos class
-title-cursos
+title-cursos id
+container-cursos class
 flex class
-container-cursos
+p-cursos class
+
+aparacer class
+fix-exp class
+exp class
+title-exp id
+container-exp class
+flex class
+p-exp class
+
+aparacer class
+fix-conquistas class
+conquistas class
+title-conquistas id
+container-conquistas class
+flex class
+p-conquistas class
