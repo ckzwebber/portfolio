@@ -17,8 +17,8 @@ function rolarHome() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-function rolarPort() {
-  var conteudo = document.getElementById("title-portfolio");
+function rolarProj() {
+  var conteudo = document.getElementById("title-projetos");
   var offset = conteudo.getBoundingClientRect().top + window.scrollY + 120;
   window.scrollTo({ top: offset, behavior: "smooth" });
 }
