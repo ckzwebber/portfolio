@@ -13,55 +13,100 @@ window.addEventListener("scroll", () => {
   lastScrollTop = scrollTop;
 });
 
-function rolarHome() {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+function scrollToPosition(targetPosition, duration) {
+  const startPosition = window.scrollY || document.documentElement.scrollTop;
+  const distance = targetPosition - startPosition;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const run = ease(timeElapsed, startPosition, distance, duration);
+    window.scrollTo(0, run);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  }
+
+  function ease(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return (c / 2) * t * t + b;
+    t--;
+    return (-c / 2) * (t * (t - 2) - 1) + b;
+  }
+
+  requestAnimationFrame(animation);
 }
 
-function rolarProj() {
-  var conteudo = document.getElementById("title-projetos");
-  var offset = conteudo.getBoundingClientRect().top + window.scrollY + 120;
-  window.scrollTo({ top: offset, behavior: "smooth" });
+function scrollToTop() {
+  scrollToPosition(0, 1000);
 }
 
-function rolarContato() {
-  var conteudo = document.getElementById("title-contato");
-  conteudo.scrollIntoView({ behavior: "smooth", block: "start" });
+function scrollToTechs() {
+  const content = document.querySelector(".tooling-box");
+  const offset = content.getBoundingClientRect().top + window.scrollY - 120;
+  scrollToPosition(offset, 1000);
 }
 
-function verificarVisibilidade() {
-  var elementos = document.querySelectorAll(".aparecer");
+function scrollToProjects() {
+  const content = document.querySelector(".p-projetos");
+  const offset = content.getBoundingClientRect().top + window.scrollY - 120;
+  scrollToPosition(offset, 1000);
+}
 
-  elementos.forEach(function (elemento) {
-    var posicao = elemento.getBoundingClientRect();
-    var alturaDaJanela =
+function scrollToContact() {
+  const content = document.getElementById("title-contato");
+  const offset = content.getBoundingClientRect().top + window.scrollY;
+  scrollToPosition(offset, 1000);
+}
+
+function checkVisibility() {
+  const elements = document.querySelectorAll(".aparecer");
+
+  elements.forEach((element) => {
+    const position = element.getBoundingClientRect();
+    const windowHeight =
       window.innerHeight || document.documentElement.clientHeight;
 
-    if (posicao.top <= alturaDaJanela * 0.65) {
-      elemento.classList.add("show");
+    if (position.top <= windowHeight * 0.65) {
+      element.classList.add("show");
     }
   });
 }
 
-window.addEventListener("load", verificarVisibilidade);
-window.addEventListener("scroll", verificarVisibilidade);
+window.addEventListener("load", checkVisibility);
+window.addEventListener("scroll", checkVisibility);
 
-function digitarTexto(texto, idElemento) {
-  var textoAtual = "";
-  var indice = 0;
-  var cursorElemento = document.getElementById(idElemento);
+function typeText(text, elementId) {
+  let currentText = "";
+  let index = 0;
+  const cursorElement = document.getElementById(elementId);
 
-  function atualizarTexto() {
-    if (indice < texto.length) {
-      textoAtual += texto[indice];
-      cursorElemento.textContent = textoAtual + "|";
-      indice++;
+  function updateText() {
+    if (index < text.length) {
+      currentText += text[index];
+      cursorElement.textContent = currentText + "|";
+      index++;
 
-      setTimeout(atualizarTexto, 300);
+      setTimeout(updateText, 300);
     } else {
-      cursorElemento.textContent = textoAtual;
+      cursorElement.textContent = currentText;
     }
   }
 
-  atualizarTexto();
+  updateText();
 }
-digitarTexto("Frontend Devloper", "js-title-sobre");
+
+typeText("Frontend Developer", "js-title-sobre");
+
+const buttonAPI = document.getElementById("btn-api");
+const buttonC = document.getElementById("btn-c");
+const buttonTask = document.getElementById("btn-task");
+
+buttonAPI.addEventListener("click", function openAPI() {
+  const urlAPI = "https://github.com/ckzwebber/Aprendizagem-.NET";
+  window.open(urlAPI);
+});
+
+buttonC.addEventListener("click", function openC() {
+  const urlC = "https://github.com/ckzwebber/Projetos-Faculdade-C-";
+  window.open(urlC);
+});

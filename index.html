@@ -28,6 +28,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -42,7 +46,7 @@
     <div id="navbar">
       <ul>
         <li class="li-navbar">
-          <button onclick="rolarHome()" class="btn-navbar">
+          <button onclick="scrollToTop()" class="btn-navbar">
             <img
               src="images/icon.png"
               alt="Foto Perfil"
@@ -53,15 +57,21 @@
         </li>
 
         <li class="li-navbar">
-          <button onclick="rolarHome()" class="btn-navbar">Sobre</button>
+          <button onclick="scrollToTechs()" class="btn-navbar">
+            Tecnologias
+          </button>
         </li>
 
         <li class="li-navbar">
-          <button onclick="rolarProj()" class="btn-navbar">Projetos</button>
+          <button onclick="scrollToProjects()" class="btn-navbar">
+            Projetos
+          </button>
         </li>
 
         <li class="li-navbar">
-          <button onclick="rolarContato()" class="btn-navbar">Contato</button>
+          <button onclick="scrollToContact()" class="btn-navbar">
+            Contato
+          </button>
         </li>
       </ul>
     </div>
@@ -103,78 +113,77 @@
           </div>
         </div>
       </div>
+
+      <div
+        onclick="scrollToTechs()"
+        class="scrolldown"
+        style="--color: skyblue"
+      >
+        <div class="chevrons">
+          <div class="chevrondown"></div>
+          <div class="chevrondown"></div>
+        </div>
+      </div>
+
       <div class="aparecer">
-        <div class="fix-projetos">
-          <div class="projetos">
-            <div id="title-projetos">
-              <p>Projetos de Desenvolvimento</p>
+        <div class="fix-tools">
+          <div class="tools">
+            <div id="title-tools">
+              <p>Tecnologias</p>
             </div>
-            <div class="container-projetos">
+            <div class="container-tools">
               <div class="flex">
-                <div class="p-projetos">
-                  <div class="p-1">
-                    <div class="card">
-                      <div class="image">
-                        <img src="images/port.png" alt="Site" class="image" />
-                      </div>
-                      <div class="content">
-                        <a href="#">
-                          <span class="title"> Site Portfólio </span>
-                        </a>
-
-                        <p class="desc">
-                          Criei esse site utilizando HTML, CSS e JavaScript para
-                          praticar e demonstrar minhas habilidades em frontend.
-                        </p>
-                        <button onclick="rolarHome()" class="action">
-                          Este site
-                        </button>
-                      </div>
-                    </div>
+                <div class="p-tools"></div>
+                <div class="tooling-box">
+                  <div class="tool">
+                    <img
+                      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
+                    />
                   </div>
-
-                  <div class="p-1">
-                    <div class="card">
-                      <div class="image">
-                        <img src="images/api.png" alt="Site" class="image" />
-                      </div>
-                      <div class="content">
-                        <a href="#">
-                          <span class="title"> C# API </span>
-                        </a>
-
-                        <p class="desc">
-                          Desenvolvi uma api em .NET com C# integrada com um
-                          banco de dados SQL Server, com diversas funções e
-                          métodos para manipulação de dados.
-                        </p>
-                        <button onclick="rolarHome()" class="action">
-                          Saiba mais
-                        </button>
-                      </div>
-                    </div>
+                  <div class="tool">
+                    <img
+                      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
+                    />
                   </div>
-
-                  <div class="p-2">
-                    <div class="card">
-                      <div class="image">
-                        <img src="images/port.png" alt="Site" class="image" />
-                      </div>
-                      <div class="content">
-                        <a href="#">
-                          <span class="title"> C Devlopment</span>
-                        </a>
-
-                        <p class="desc">
-                          Criei diversos algoritmos em C, criando vários
-                          programas e exercitando meu conhecimento na linguagem.
-                        </p>
-
-                        <button onclick="rolarHome()" class="action">
-                          Saiba mais
-                        </button>
-                      </div>
-                    </div>
+                  <div class="tool">
+                    <img
+                      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"
+                    />
+                  </div>
+                  <div class="tool">
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                    />
+                  </div>
+                  <div class="tool">
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+                    />
+                  </div>
+                  <div class="tool">
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
+                    />
+                  </div>
+                  <div class="tool">
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg"
+                    />
+                  </div>
+                  <div class="tool">
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg"
+                    />
+                  </div>
+                  <div class="tool">
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
+                    />
+                  </div>
+                  <div class="tool">
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+                    />
                   </div>
                 </div>
               </div>
@@ -184,31 +193,98 @@
       </div>
 
       <div class="aparecer">
-        <div class="fix-cursos">
-          <div class="cursos">
-            <div id="title-cursos">
-              <p>Cursos</p>
+        <div class="fix-projetos">
+          <div class="projetos">
+            <div id="title-projetos">
+              <p>Projetos em Destaque</p>
             </div>
-            <div class="container-cursos">
+            <div class="container-projetos">
               <div class="flex">
-                <div class="p-cursos">
-                  <p>
-                    CS50, Harvard<br />
-                    Ampliando meu conhecimento em ciência da computação e
-                    resolução de problemas.
-                  </p>
-                  <p>
-                    Desenvolvimento Web Completo, Udemy<br />Concluí o curso
-                    Desenvolvimento Web Completo na Udemy, onde aprofundei meus
-                    conhecimentos em HTML, CSS, JavaScript e frameworks
-                    modernos.
-                  </p>
-                  <p>
-                    DevTheDevs, PUCRS<br />
-                    Participei do programa DevTheDevs na PUCRS, aprimorando
-                    minhas habilidades em desenvolvimento de software e
-                    colaboração em equipe.
-                  </p>
+                <div class="p-projetos">
+                  <div class="p-1">
+                    <div class="card">
+                      <div class="image">
+                        <img src="images/api.png" alt="Site" class="image" />
+                      </div>
+                      <div class="content">
+                        <a href="#">
+                          <span class="title"> C# REST API </span>
+                        </a>
+                        <div class="desc">
+                          <p>
+                            Desenvolvi uma API em .NET com C# integrada com um
+                            banco de dados SQL Server, com diversas funções e
+                            métodos para manipulação de dados.
+                          </p>
+                        </div>
+                        <button class="action" id="btn-api">Saiba mais</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="p-1">
+                    <div class="card">
+                      <div class="image">
+                        <img src="images/port.png" alt="Site" class="image" />
+                      </div>
+                      <div class="content">
+                        <a href="#">
+                          <span class="title"> Site Portfólio </span>
+                        </a>
+                        <div class="desc">
+                          <p>
+                            Criei esse site utilizando HTML, CSS e JavaScript
+                            para praticar e demonstrar minhas habilidades em
+                            frontend.
+                          </p>
+                        </div>
+                        <button onclick="scrollToTop()" class="action">
+                          Este site
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="card">
+                      <div class="image">
+                        <img src="images/c.png" alt="Site" class="image" />
+                      </div>
+                      <div class="content">
+                        <a href="#">
+                          <span class="title"> C Devlopment</span>
+                        </a>
+
+                        <div class="desc">
+                          <p>
+                            Criei diversos algoritmos em C, criando vários
+                            programas e exercitando meu conhecimento na
+                            linguagem.
+                          </p>
+                        </div>
+                        <button class="action" id="btn-c">Saiba mais</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-2">
+              <div class="card-special">
+                <div class="image-special">
+                  <img src="images/TF.png" alt="Site" class="image-special" />
+                </div>
+                <div class="content">
+                  <a href="#">
+                    <span class="title"> TaskForge </span>
+                  </a>
+                  <div class="desc">
+                    <p>
+                      Meu mais novo projeto: o seu novo agendador de tarefas
+                      está em desenvolvimento e chegará em breve!
+                    </p>
+                  </div>
+                  <button class="action" id="btn-task">Em breve</button>
                 </div>
               </div>
             </div>
@@ -234,21 +310,6 @@
                     habilidades em comunicação e resolução de problemas,
                     fortalecendo minha paixão pela tecnologia.
                   </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="aparecer">
-        <div class="fix-conquistas">
-          <div class="conquistas">
-            <div id="title-conquistas">
-              <p>Conquistas Acadêmicas</p>
-            </div>
-            <div class="container-conquistas">
-              <div class="flex">
-                <div class="p-conquistas">
                   <p>
                     3 Menções Honrosas OBMEP: Recebi três menções honrosas na
                     Olimpíada Brasileira de Matemática das Escolas Públicas

@@ -1,25 +1,12 @@
-adicionar tecnologias quadrados
 arrumar css mobile
-padronizar js
 
 
-
-fix-projetos class
-projetos class
-container-projetos class
-title-projetos id
+fix-tools class
+tools class
+title-tools id
+container-tools class
 flex class
-p-projetos class
-p-1 class
-p-2 class
-
-
-fix-cursos class
-cursos class
-title-cursos id
-container-cursos class
-flex class
-p-cursos class
+p-tools class
 
 
 fix-exp class
@@ -29,10 +16,3 @@ container-exp class
 flex class
 p-exp class
 
-
-fix-conquistas class
-conquistas class
-title-conquistas id
-container-conquistas class
-flex class
-p-conquistas class
