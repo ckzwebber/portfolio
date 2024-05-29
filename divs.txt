@@ -1,21 +1,3 @@
 loading screen
-welcome name screen
-logos contato
+welcome name screen with tecs
 arrumar css mobile
-
-
-fix-tools class
-tools class
-title-tools id
-container-tools class
-flex class
-p-tools class
-
-
-fix-exp class
-exp class
-title-exp id
-container-exp class
-flex class
-p-exp class
-

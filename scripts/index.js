@@ -53,7 +53,7 @@ function scrollToProjects() {
 }
 
 function scrollToContact() {
-  const content = document.getElementById("title-contato");
+  const content = document.querySelector(".copy");
   const offset = content.getBoundingClientRect().top + window.scrollY;
   scrollToPosition(offset, 1000);
 }
