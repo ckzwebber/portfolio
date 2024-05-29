@@ -1,3 +1,5 @@
-welcome name screen with tecs
 backgronds change?
 arrumar css mobile
+
+80rem = 1280px projetos
+p-sobre 

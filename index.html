@@ -22,7 +22,7 @@
       media="screen and (max-width: 1150px)"
       href="/styles/mobile.css"
     />
-    <title>Carlos Miguel | Frotend Dev</title>
+    <title>Carlos Miguel | FullStack Dev</title>
     <link rel="icon" href="/images/icontop.png" type="image/x-icon" />
     <meta
       name="viewport"
@@ -50,9 +50,7 @@
         </button>
         <ul class="navbar-center">
           <li class="li-navbar">
-            <button onclick="scrollToTechs()" class="btn-navbar">
-              Tecnologias
-            </button>
+            <button onclick="scrollToAbout()" class="btn-navbar">Sobre</button>
           </li>
           <li class="li-navbar">
             <button onclick="scrollToProjects()" class="btn-navbar">
@@ -70,59 +68,23 @@
 
     <div id="container">
       <div class="aparecer">
-        <div class="fix-sobre">
-          <div class="sobre">
-            <div id="title-sobre">
-              <h2 id="js-title-sobre"></h2>
-            </div>
-            <div class="container-sobre">
-              <div class="p-sobre">
-                <p>
-                  Seja bem-vindo! Me chamo Carlos Miguel, tenho 18 anos e sou
-                  desenvovedor front-end.
-                </p>
-                <p>
-                  Estou cursando Ciência da Computação na UNESC, aprimorando
-                  minhas habilidades e conhecimentos na área da tecnologia.
-                </p>
-                <p>
-                  Estou constantemento trabalhando no desenvolvimento web em
-                  busca de novos desafios para expandir minha experiência
-                  profissional. Gosto de explorar novas tecnologias e tendências
-                  do mercado a todo instante.
-                </p>
+        <div class="fix-cm">
+          <div class="cm">
+            <div class="cm-content">
+              <div class="cm-subtitle">
+                <p>Desenvolvedor FullStack</p>
               </div>
-
-              <div class="img-sobre">
-                <img
-                  src="images/perfil.jpg"
-                  alt="Foto Perfil"
-                  width="300"
-                  height="300"
-                />
+              <div class="cm-title">
+                <p>Carlos Miguel</p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div
-        onclick="scrollToTechs()"
-        class="scrolldown"
-        style="--color: skyblue"
-      >
-        <div class="chevrons">
-          <div class="chevrondown"></div>
-          <div class="chevrondown"></div>
-        </div>
-      </div>
-
       <div class="aparecer">
         <div class="fix-tools">
           <div class="tools">
-            <div id="title-tools">
-              <p>Tecnologias</p>
-            </div>
             <div class="container-tools">
               <div class="flex">
                 <div class="p-tools"></div>
@@ -178,6 +140,50 @@
                     />
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div onclick="scrollToAbout()" class="scrolldown">
+        <div class="chevrons">
+          <div class="chevrondown"></div>
+          <div class="chevrondown"></div>
+        </div>
+      </div>
+
+      <div class="aparecer">
+        <div class="fix-sobre">
+          <div class="sobre">
+            <div id="title-sobre">
+              <h2 id="js-title-sobre"></h2>
+            </div>
+            <div class="container-sobre">
+              <div class="p-sobre">
+                <p>
+                  Seja bem-vindo! Me chamo Carlos Miguel, tenho 18 anos e sou
+                  desenvovedor FullStack.
+                </p>
+                <p>
+                  Estou cursando Ciência da Computação na UNESC, aprimorando
+                  minhas habilidades e conhecimentos na área da tecnologia.
+                </p>
+                <p>
+                  Estou constantemento trabalhando no desenvolvimento web em
+                  busca de novos desafios para expandir minha experiência
+                  profissional. Gosto de explorar novas tecnologias e tendências
+                  do mercado a todo instante.
+                </p>
+              </div>
+
+              <div class="img-sobre">
+                <img
+                  src="images/perfil.jpg"
+                  alt="Foto Perfil"
+                  width="300"
+                  height="300"
+                />
               </div>
             </div>
           </div>

@@ -40,8 +40,8 @@ function scrollToTop() {
   scrollToPosition(0, 1000);
 }
 
-function scrollToTechs() {
-  const content = document.querySelector(".tooling-box");
+function scrollToAbout() {
+  const content = document.querySelector("#title-sobre");
   const offset = content.getBoundingClientRect().top + window.scrollY - 120;
   scrollToPosition(offset, 1000);
 }
@@ -95,7 +95,7 @@ function typeText(text, elementId) {
   updateText();
 }
 
-typeText("Frontend Developer", "js-title-sobre");
+typeText("FullStack Developer", "js-title-sobre");
 
 const buttonAPI = document.getElementById("btn-api");
 const buttonC = document.getElementById("btn-c");
