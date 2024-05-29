@@ -1,3 +1,4 @@
-welcome name screen with tecs
+welcome name screen with techs
 backgronds change?
 arrumar css mobile
+multi language 
