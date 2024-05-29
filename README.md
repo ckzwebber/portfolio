@@ -9,9 +9,9 @@ Meu portfólio é uma visão geral do meu aprendizado como estudante de Ciência
 ## Conteúdo
 
   <ul>
-    <li>🚀 <strong>Projetos de Desenvolvimento</strong></li>
-    <li>🎓 <strong>Formação Acadêmica</strong></li>
-    <li>💼 <strong>Experiência Profissional</strong></li>
+    <li>🎓 <strong>Tecnologias</strong></li>
+    <li>🚀 <strong>Projetos Em Destaque</strong></li>
+    <li>💼 <strong>Experiência</strong></li>
   </ul>
 
 ## Contribuições

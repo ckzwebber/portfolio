@@ -1,3 +1,6 @@
+loading screen
+welcome name screen
+logos contato
 arrumar css mobile
 
 
