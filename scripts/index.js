@@ -40,22 +40,21 @@ function scrollToTop() {
   scrollToPosition(0, 1000);
 }
 
+function scrollToSection(selector) {
+  const content = document.querySelector(selector);
+  if (content) {
+    const offset = content.getBoundingClientRect().top + window.scrollY;
+    scrollToPosition(offset, 1000);
+  }
+}
+
+// Usar essa função para todas as seções
 function scrollToAbout() {
-  const content = document.querySelector("#title-sobre");
-  const offset = content.getBoundingClientRect().top + window.scrollY - 120;
-  scrollToPosition(offset, 1000);
+  scrollToSection(".sobre");
 }
 
 function scrollToProjects() {
-  const content = document.querySelector(".p-projetos");
-  const offset = content.getBoundingClientRect().top + window.scrollY - 120;
-  scrollToPosition(offset, 1000);
-}
-
-function scrollToContact() {
-  const content = document.querySelector(".copy");
-  const offset = content.getBoundingClientRect().top + window.scrollY;
-  scrollToPosition(offset, 1000);
+  scrollToSection(".projetos");
 }
 
 function checkVisibility() {
@@ -95,7 +94,7 @@ function typeText(text, elementId) {
   updateText();
 }
 
-typeText("FullStack Developer", "js-title-sobre");
+typeText("FullStack Developer", "js-subtitle");
 
 const buttonAPI = document.getElementById("btn-api");
 const buttonC = document.getElementById("btn-c");
