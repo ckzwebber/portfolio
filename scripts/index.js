@@ -49,7 +49,6 @@ function scrollToSection(selector) {
   }
 }
 
-// Usar essa função para todas as seções
 function scrollToAbout() {
   scrollToSection(".sobre");
 }
