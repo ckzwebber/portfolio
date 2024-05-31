@@ -417,6 +417,58 @@ a {
   cursor: not-allowed;
 }
 
+#title-conquistas {
+  padding-top: 3%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1%;
+}
+
+.info-1 {
+  display: flex;
+  justify-content: center;
+}
+
+.info-2 {
+  display: flex;
+  justify-content: center;
+}
+
+.info {
+  width: 320px;
+  padding: 12px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: #051119;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px -3px #111;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.info__icon img {
+  width: 20px;
+  height: 20px;
+  padding-top: 4px;
+  margin-right: 8px;
+  color: white;
+}
+
+.info__icon path {
+  fill: #fff;
+}
+
+.info__title {
+  font-size: 18px;
+  color: #fff;
+  justify-content: left;
+}
+
 #title-contato {
   padding-top: 3%;
   display: flex;

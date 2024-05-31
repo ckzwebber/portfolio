@@ -6,6 +6,7 @@ window.addEventListener("scroll", () => {
 
   if (scrollTop > lastScrollTop && scrollTop > 50) {
     navbar.style.top = "-90px";
+    menu.style.opacity = "0";
   } else {
     navbar.style.top = "0";
   }
