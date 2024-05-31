@@ -124,3 +124,10 @@ menuButton.addEventListener("click", function () {
     menu.style.display = "block";
   }
 });
+
+const menuItems = menu.querySelectorAll("li");
+menuItems.forEach((item) => {
+  item.addEventListener("click", function () {
+    menu.style.display = "none";
+  });
+});
