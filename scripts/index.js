@@ -118,16 +118,16 @@ const menuButton = document.getElementById("menu-button");
 const menu = document.getElementById("menu");
 
 menuButton.addEventListener("click", function () {
-  if (menu.style.display === "block") {
-    menu.style.display = "none";
+  if (menu.style.opacity === "1") {
+    menu.style.opacity = "0";
   } else {
-    menu.style.display = "block";
+    menu.style.opacity = "1";
   }
 });
 
 const menuItems = menu.querySelectorAll("li");
 menuItems.forEach((item) => {
   item.addEventListener("click", function () {
-    menu.style.display = "none";
+    menu.style.opacity = "0";
   });
 });

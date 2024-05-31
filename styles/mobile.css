@@ -30,18 +30,51 @@ a {
 
 #menu-button {
   display: flex;
-  justify-content: space-between;
-  transition: top 0.3s ease-in-out;
+  justify-content: right;
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #ffffff;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
 }
 
 #menu {
-  display: none;
-  transition: top 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  background: #051119;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  border-top: 2px solid #ffffff;
 }
 
-#menu li {
-  transition: top 0.3s ease-in-out;
-  padding-bottom: 10px;
+.menu-ul {
+  background-color: #051119;
+}
+
+.btn-menu {
+  padding-right: 0.5rem;
+  padding-top: 0.001rem;
+  padding-bottom: 0.8rem;
+  padding-left: 0.6rem;
+  list-style: none;
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.btn-menu-s {
+  padding-top: 1rem;
 }
 
 #navbar {
