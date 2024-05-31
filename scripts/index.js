@@ -57,6 +57,10 @@ function scrollToProjects() {
   scrollToSection(".projetos");
 }
 
+function scrollToContato() {
+  scrollToSection(".contato");
+}
+
 function checkVisibility() {
   const elements = document.querySelectorAll(".aparecer");
 
