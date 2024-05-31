@@ -10,9 +10,9 @@ Você pode conferi-lo aqui: https://webberportfolio.netlify.app
 ## Conteúdo
 
   <ul>
-    <li>🚀 <strong>Projetos de Desenvolvimento</strong></li>
-    <li>🎓 <strong>Formação Acadêmica</strong></li>
-    <li>💼 <strong>Experiência Profissional</strong></li>
+    <li>🎓 <strong>Tecnologias</strong></li>
+    <li>🚀 <strong>Projetos Em Destaque</strong></li>
+    <li>💼 <strong>Experiência</strong></li>
   </ul>
 
 ## Contribuições

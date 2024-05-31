@@ -19,14 +19,18 @@
     <link rel="stylesheet" type="text/css" href="/styles/index.css" />
     <link
       rel="stylesheet"
-      media="screen and (max-width: 1150px)"
+      media="screen and (max-width: 1350px)"
       href="/styles/mobile.css"
     />
-    <title>Portfólio | Carlos Miguel</title>
-    <link rel="icon" href="/images/icon.png" type="image/x-icon" />
+    <title>Carlos Miguel | FullStack Dev</title>
+    <link rel="icon" href="/images/icontop.png" type="image/x-icon" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,255 +39,387 @@
       rel="stylesheet"
     />
     <script src="/scripts/index.js" type="text/javascript" defer></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn-uicons.flaticon.com/2.2.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn-uicons.flaticon.com/2.2.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn-uicons.flaticon.com/2.2.0/uicons-brands/css/uicons-brands.css"
-    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
 
   <body>
     <div id="navbar">
-      <ul>
-        <li class="li-navbar">
-          <button onclick="rolarHome()" class="btn-navbar">
-            <i class="fi fi-rr-home"></i>
-          </button>
-        </li>
+      <div class="navbar-content">
+        <button onclick="scrollToTop()" class="btn-navbar">
+          Carlos Miguel
+        </button>
+        <ul class="navbar-center">
+          <li class="li-navbar">
+            <button onclick="scrollToAbout()" class="btn-navbar">Sobre</button>
+          </li>
+          <li class="li-navbar">
+            <button onclick="scrollToProjects()" class="btn-navbar">
+              Projetos
+            </button>
+          </li>
 
-        <li class="li-navbar">
-          <button onclick="rolarHome()" class="btn-navbar">Sobre</button>
-        </li>
+          <li class="li-navbar">
+            <button onclick="scrollToContato()" class="btn-navbar">
+              Contato
+            </button>
+          </li>
+          <button id="menu-button">&#9776;</button>
+        </ul>
+      </div>
+    </div>
 
-        <li class="li-navbar">
-          <button onclick="rolarPort()" class="btn-navbar">Portfólio</button>
-        </li>
-
-        <li class="li-navbar">
-          <button onclick="rolarContato()" class="btn-navbar">Contato</button>
-        </li>
-
-        <li class="li-navbar">
-          <button onclick="lightMode()" class="btn-navbar">
-            <i class="fi fi-rr-bulb"></i>
-          </button>
-        </li>
-      </ul>
+    <div id="menu">
+      <div class="menu-ul">
+        <ul>
+          <li onclick="scrollToAbout()" class="btn-menu btn-menu-s">Sobre</li>
+          <br />
+          <li onclick="scrollToProjects()" class="btn-menu">Projetos</li>
+          <br />
+          <li onclick="scrollToContato()" class="btn-menu">Contato</li>
+        </ul>
+      </div>
     </div>
 
     <div id="container">
-      <div class="aparecer">
-        <div class="sobre">
-          <div id="title-sobre">
-            <h2 id="js-title-sobre"></h2>
-          </div>
-          <div class="container-sobre">
-            <div class="p-sobre">
-              <p>
-                👋 Olá! Me chamo Carlos Miguel, tenho 18 anos e sou apaixonado
-                pela tecnologia desde pequeno.
-              </p>
-              <p>
-                🎓 Atualmente, estou navegando pelo mundo da Ciência da
-                Computação na UNESC, onde estou constantemente aprimorando
-                minhas habilidades e conhecimentos nesta fascinante área.
-              </p>
-              <p>
-                🚀 Sou um entusiasta de projetos de desenvolvimento web e estou
-                sempre em busca de novos desafios para expandir meu horizonte
-                profissional. Acredito firmemente na importância de aprender
-                continuamente e estou sempre explorando novas tecnologias e
-                tendências do mercado.
-              </p>
-              <p>
-                🎯 Meu objetivo? Contribuir de forma significativa para a
-                inovação e o progresso no campo da computação, enquanto me
-                esforço para alcançar meus objetivos pessoais e profissionais.
-              </p>
-            </div>
-
-            <div class="img-sobre">
-              <img
-                src="images/perfil.jpg"
-                alt="Foto Perfil"
-                width="300"
-                height="300"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="aparecer">
-        <div class="portfolio">
-          <div id="title-portfolio">
-            <h2>Portfólio</h2>
-          </div>
-          <div class="container-portfolio">
-            <div class="title-portfolio-projetos">
-              <p>🚀 Projetos de Desenvolvimento</p>
-            </div>
-            <div class="flex">
-              <div class="container-portfolio-projetos">
-                <p>
-                  🌐 Site Pessoal: Desenvolvi esse site pessoal utilizando HTML,
-                  CSS e JavaScript para demonstrar minhas habilidades em
-                  front-end.
-                  <a
-                    href="https://github.com/ckzwebber/Portfolio-CarlosMiguel"
-                    target="_blank"
-                    >Ver Projeto</a
-                  >.
-                </p>
-                <p>
-                  💻 Aplicações em C: Explorei conceitos avançados em C, criando
-                  diversas aplicações e exercitando meu conhecimento na
-                  linguagem.
-                  <a
-                    href="https://github.com/ckzwebber/Projetos-Faculdade-C-e-Cpp"
-                    target="_blank"
-                    >Ver Projeto</a
-                  >.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="aparecer">
-            <div class="title-portfolio-cursos">
-              <p>📚 Cursos</p>
-            </div>
-            <div class="flex">
-              <div class="container-portfolio-cursos">
-                <p>
-                  🎓 CS50, Harvard<br />
-                  Concluí com sucesso o curso CS50, da Universidade de Harvard,
-                  ampliando meu conhecimento em ciência da computação e
-                  resolução de problemas.
-                </p>
-                <p>
-                  🛠️ Desenvolvimento Web Completo, Udemy<br />Estou realizando o
-                  curso Desenvolvimento Web Completo na Udemy, onde busco
-                  aprofundar meus conhecimentos em HTML, CSS, JavaScript e
-                  frameworks modernos.
-                </p>
-                <p>
-                  💻 DevTheDevs, PUCRS<br />
-                  Participei do programa DevTheDevs na PUCRS, aprimorando minhas
-                  habilidades em desenvolvimento de software e colaboração em
-                  equipe.
-                </p>
-              </div>
-            </div>
-            <div class="flex">
-              <div class="container-portfolio-cursos">
-                <p class="bootcamp">
-                  🔥 Bootcamp .NET Developer, DIO<br />
-                  Realizei o Bootcamp .NET Developer na Digital Innovation One,
-                  onde adquiri conhecimentos em desenvolvimento de software com
-                  foco na plataforma .NET. Explorei conceitos de programação
-                  orientada a objetos (POO), desenvolvimento de APIs, integração
-                  com banco de dados SQL utilizando Entity Framework, além de
-                  Docker.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="aparecer">
-            <div class="title-portfolio-exp">
-              <p>💼 Experiência</p>
-            </div>
-            <div class="flex">
-              <div class="container-portfolio-exp">
-                <p>
-                  Como técnico de informática, trabalhei por um ano em
-                  manutenção de computadores, sistemas, redes e impressoras.
-                  Responsabilidades incluíam diagnóstico e resolução de
-                  problemas de hardware e software, instalação e configuração de
-                  sistemas operacionais e suporte aos usuários. Adquiri
-                  habilidades em comunicação e resolução de problemas,
-                  fortalecendo minha paixão pela tecnologia.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="aparecer">
-            <div class="title-portfolio-extra">
-              <p>🏆 Conquistas Acadêmicas</p>
-            </div>
-            <div class="flex">
-              <div class="container-portfolio-extra">
-                <p>
-                  3 Menções Honrosas OBMEP: Recebi três menções honrosas na
-                  Olimpíada Brasileira de Matemática das Escolas Públicas
-                  (OBMEP), demonstrando meu comprometimento e habilidades
-                  analíticas.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="aparecer">
-            <div class="title-portfolio-extra">
-              <p>🔗 GitHub</p>
-            </div>
-            <div class="flex">
-              <div class="container-portfolio-extra">
-                <p>
-                  Confira todos os meus projetos e contribuições no
-                  <a href="https://github.com/ckzwebber" target="_blank">
-                    GitHub</a
-                  >.
-                </p>
+      <div class="special-back">
+        <div class="aparecer">
+          <div class="fix-cm">
+            <div class="cm">
+              <div class="cm-content">
+                <div class="cm-subtitle">
+                  <h2 id="js-subtitle"></h2>
+                </div>
+                <div class="cm-title">
+                  <p>Carlos Miguel</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
+        <div class="aparecer">
+          <div class="fix-tools">
+            <div class="tools">
+              <div class="container-tools">
+                <div class="flex">
+                  <div class="p-tools"></div>
+                  <div class="tooling-box">
+                    <div class="tool">
+                      <img
+                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
+                      />
+                      <span class="tooltip-text">HTML5</span>
+                    </div>
+                    <div class="tool">
+                      <img
+                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
+                      />
+                      <span class="tooltip-text">CSS3</span>
+                    </div>
+                    <div class="tool">
+                      <img
+                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"
+                      />
+                      <span class="tooltip-text">JavaScript</span>
+                    </div>
+                    <div class="tool">
+                      <img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                      />
+                      <span class="tooltip-text">Git</span>
+                    </div>
+                    <div class="tool">
+                      <img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+                      />
+                      <span class="tooltip-text">C++</span>
+                    </div>
+                    <div class="tool">
+                      <img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
+                      />
+                      <span class="tooltip-text">C#</span>
+                    </div>
+                    <div class="tool">
+                      <img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg"
+                      />
+                      <span class="tooltip-text">.NET</span>
+                    </div>
+                    <div class="tool">
+                      <img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg"
+                      />
+                      <span class="tooltip-text">SQL</span>
+                    </div>
+                    <div class="tool">
+                      <img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
+                      />
+                      <span class="tooltip-text">Docker</span>
+                    </div>
+                    <div class="tool">
+                      <img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+                      />
+                      <span class="tooltip-text">Figma</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div onclick="scrollToAbout()" class="scrolldown">
+          <div class="chevrons">
+            <div class="chevrondown"></div>
+            <div class="chevrondown"></div>
+          </div>
+        </div>
       </div>
 
-      <div class="aparecer">
-        <div class="contato">
-          <div id="title-contato">
-            <h2>Contato</h2>
+      <div class="back">
+        <div class="aparecer">
+          <div class="fix-sobre">
+            <div class="sobre">
+              <div id="title-sobre">
+                <p>FullSatck Developer</p>
+              </div>
+              <div class="container-sobre">
+                <div class="p-sobre">
+                  <p>
+                    Seja bem-vindo! Me chamo Carlos Miguel, tenho 18 anos e sou
+                    desenvovedor FullStack.
+                  </p>
+                  <p>
+                    Estou cursando Ciência da Computação na UNESC, aprimorando
+                    minhas habilidades e conhecimentos na área da tecnologia.
+                  </p>
+                  <p>
+                    Estou constantemento trabalhando no desenvolvimento web em
+                    busca de novos desafios para expandir minha experiência
+                    profissional. Gosto de explorar novas tecnologias e
+                    tendências do mercado a todo instante.
+                  </p>
+                </div>
+
+                <div class="img-sobre">
+                  <img
+                    src="images/perfil.jpg"
+                    alt="Foto Perfil"
+                    width="300"
+                    height="300"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="container-contato">
-            <div class="p-contato">
-              <p>
-                🔗 LinkedIn:
-                <a
-                  href="https://www.linkedin.com/in/cmiguelwm/"
-                  target="_blank"
+        </div>
+
+        <div class="aparecer">
+          <div class="fix-projetos">
+            <div class="projetos">
+              <div id="title-projetos">
+                <p>Projetos</p>
+              </div>
+              <div class="container-projetos">
+                <div class="flex">
+                  <div class="p-projetos">
+                    <div class="card p-1">
+                      <div class="image">
+                        <img src="images/api.png" alt="Site" class="image" />
+                      </div>
+                      <div class="content">
+                        <a href="#">
+                          <span class="title"> C# REST API </span>
+                        </a>
+                        <div class="desc">
+                          <p>
+                            Desenvolvi uma API em .NET com C# integrada com um
+                            banco de dados SQL Server, com diversas funções e
+                            métodos para manipulação de dados.
+                          </p>
+                        </div>
+                        <button class="action" id="btn-api">Saiba mais</button>
+                      </div>
+                    </div>
+
+                    <div class="card p-1">
+                      <div class="image">
+                        <img src="images/port.png" alt="Site" class="image" />
+                      </div>
+                      <div class="content">
+                        <a href="#">
+                          <span class="title"> Site Portfólio </span>
+                        </a>
+                        <div class="desc">
+                          <p>
+                            Criei esse site utilizando HTML, CSS e JavaScript
+                            para praticar e demonstrar minhas habilidades em
+                            frontend.
+                          </p>
+                        </div>
+                        <button onclick="scrollToTop()" class="action">
+                          Este site
+                        </button>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="card">
+                        <div class="image">
+                          <img src="images/c.png" alt="Site" class="image" />
+                        </div>
+                        <div class="content">
+                          <a href="#">
+                            <span class="title"> C Development</span>
+                          </a>
+
+                          <div class="desc">
+                            <p>
+                              Criei diversos algoritmos em C, criando vários
+                              programas e exercitando meu conhecimento na
+                              linguagem.
+                            </p>
+                          </div>
+                          <button class="action" id="btn-c">Saiba mais</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="p-2">
+                <div class="card-special">
+                  <div class="image-special">
+                    <img src="images/TF.png" alt="Site" class="image-special" />
+                  </div>
+                  <div class="content">
+                    <a href="#">
+                      <span class="title"> TaskForge </span>
+                    </a>
+                    <div class="desc">
+                      <p>
+                        Meu mais novo projeto: o seu novo agendador de tarefas
+                        está em desenvolvimento e chegará em breve!
+                      </p>
+                    </div>
+                    <button class="action" id="btn-task">Em breve</button>
+                  </div>
+                </div>
+
+        <div id="title-conquistas">
+          <p>Cursos, Conquistas e Experiência</p>
+        </div>
+        <div class="info-1">
+          <div class="info">
+            <div class="info__icon">
+              <img src="/images/vs.svg" />
+            </div>
+            <div class="info__title">CS50 - Harvard</div>
+          </div>
+
+          <div class="info">
+            <div class="info__icon">
+              <img src="/images/js.svg" />
+            </div>
+            <div class="info__title">Web Development - Udemy</div>
+          </div>
+
+          <div class="info">
+            <div class="info__icon">
+              <img src="/images/cs.svg" />
+            </div>
+            <div class="info__title">.NET Developer - DIO</div>
+          </div>
+        </div>
+        <div class="info-2">
+          <div class="info">
+            <div class="info__icon">
+              <img src="/images/trofeu.svg" />
+            </div>
+            <div class="info__title">3x Menções Honrosas - OBMEP</div>
+          </div>
+
+          <div class="info">
+            <div class="info__icon">
+              <img src="/images/java.svg" />
+            </div>
+            <div class="info__title">DevTheDevs - PUCRS</div>
+          </div>
+
+          <div class="info">
+            <div class="info__icon">
+              <img src="/images/work.svg" />
+            </div>
+            <div class="info__title">1 ano - Técnico de TI</div>
+          </div>
+        </div>
+
+        <div id="title-contato">
+          <p>Entre em contato:</p>
+        </div>
+        <div class="container-contato">
+          <ul class="contato">
+            <li class="icon-content">
+              <a
+                href="https://www.linkedin.com/in/cmiguelwm/"
+                target="_blank"
+                aria-label="LinkedIn"
+                data-social="linkedin"
+              >
+                <div class="filled"></div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-linkedin"
+                  viewBox="0 0 16 16"
+                  xml:space="preserve"
                 >
-                  Carlos Miguel
-                </a>
-              </p>
-              <p>
-                📧 E-mail:
-                <a href="mailto:kacowebber12@outlook.com">
-                  kacowebber12@outlook.com</a
+                  <path
+                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </a>
+              <div class="tooltip">LinkedIn</div>
+            </li>
+            <li class="icon-content">
+              <a
+                href="https://github.com/ckzwebber"
+                target="_blank"
+                aria-label="GitHub"
+                data-social="github"
+              >
+                <div class="filled"></div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-github"
+                  viewBox="0 0 16 16"
+                  xml:space="preserve"
                 >
-              </p>
-              <br />
-              <p>
-                Fique à vontade para entrar em contato comigo por e-mail ou
-                através do LinkedIn. Estou sempre aberto a novas oportunidades
-                de colaboração e networking. Obrigado pela visita!
-              </p>
-            </div>
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </a>
+              <div class="tooltip">GitHub</div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex">
+          <div class="copy">
+            <p>Copyright ©2024 Carlos Miguel. Todos os direitos reservados.</p>
           </div>
         </div>
-      </div>
-
-      <div id="copy">
-        <p>
-          Copyright ©2024 Carlos Miguel. Todos os direitos reservados. <br />🌎
-          Criciúma, SC, Brasil 🇧🇷.
-        </p>
       </div>
     </div>
   </body>

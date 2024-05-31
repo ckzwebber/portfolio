@@ -6,6 +6,7 @@ window.addEventListener("scroll", () => {
 
   if (scrollTop > lastScrollTop && scrollTop > 50) {
     navbar.style.top = "-90px";
+    menu.style.opacity = "0";
   } else {
     navbar.style.top = "0";
   }
@@ -13,60 +14,120 @@ window.addEventListener("scroll", () => {
   lastScrollTop = scrollTop;
 });
 
-function rolarHome() {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+function scrollToPosition(targetPosition, duration) {
+  const startPosition = window.scrollY || document.documentElement.scrollTop;
+  const distance = targetPosition - startPosition;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const run = ease(timeElapsed, startPosition, distance, duration);
+    window.scrollTo(0, run);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  }
+
+  function ease(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return (c / 2) * t * t + b;
+    t--;
+    return (-c / 2) * (t * (t - 2) - 1) + b;
+  }
+
+  requestAnimationFrame(animation);
 }
 
-function rolarPort() {
-  let conteudo = document.getElementById("title-portfolio");
-  let offset = conteudo.getBoundingClientRect().top + window.scrollY + 120;
-  window.scrollTo({ top: offset, behavior: "smooth" });
+function scrollToTop() {
+  scrollToPosition(0, 1000);
 }
 
-function rolarContato() {
-  let conteudo = document.getElementById("title-contato");
-  conteudo.scrollIntoView({ behavior: "smooth", block: "start" });
+function scrollToSection(selector) {
+  const content = document.querySelector(selector);
+  if (content) {
+    const offset = content.getBoundingClientRect().top + window.scrollY;
+    scrollToPosition(offset, 1000);
+  }
 }
 
-function lightMode() {
-  let content = document.querySelector(".container");
-  container.classList.toggle("light-mode");
+function scrollToAbout() {
+  scrollToSection(".sobre");
 }
 
-function verificarVisibilidade() {
-  let elementos = document.querySelectorAll(".aparecer");
+function scrollToProjects() {
+  scrollToSection(".projetos");
+}
 
-  elementos.forEach(function (elemento) {
-    let posicao = elemento.getBoundingClientRect();
-    let alturaDaJanela =
+function scrollToContato() {
+  scrollToSection(".copy");
+}
+
+function checkVisibility() {
+  const elements = document.querySelectorAll(".aparecer");
+
+  elements.forEach((element) => {
+    const position = element.getBoundingClientRect();
+    const windowHeight =
       window.innerHeight || document.documentElement.clientHeight;
 
-    if (posicao.top <= alturaDaJanela * 0.65) {
-      elemento.classList.add("show");
+    if (position.top <= windowHeight * 0.65) {
+      element.classList.add("show");
     }
   });
 }
 
-window.addEventListener("load", verificarVisibilidade);
-window.addEventListener("scroll", verificarVisibilidade);
+window.addEventListener("load", checkVisibility);
+window.addEventListener("scroll", checkVisibility);
 
-function digitarTexto(texto, idElemento) {
-  let textoAtual = "";
-  let indice = 0;
-  let cursorElemento = document.getElementById(idElemento);
+function typeText(text, elementId) {
+  let currentText = "";
+  let index = 0;
+  const cursorElement = document.getElementById(elementId);
 
-  function atualizarTexto() {
-    if (indice < texto.length) {
-      textoAtual += texto[indice];
-      cursorElemento.textContent = textoAtual + "|";
-      indice++;
+  function updateText() {
+    if (index < text.length) {
+      currentText += text[index];
+      cursorElement.textContent = currentText + "|";
+      index++;
 
-      setTimeout(atualizarTexto, 300);
+      setTimeout(updateText, 300);
     } else {
-      cursorElemento.textContent = textoAtual;
+      cursorElement.textContent = currentText;
     }
   }
 
-  atualizarTexto();
+  updateText();
 }
-digitarTexto("Sobre mim", "js-title-sobre");
+
+typeText("FullStack Developer", "js-subtitle");
+
+const buttonAPI = document.getElementById("btn-api");
+const buttonC = document.getElementById("btn-c");
+const buttonTask = document.getElementById("btn-task");
+
+buttonAPI.addEventListener("click", function openAPI() {
+  const urlAPI = "https://github.com/ckzwebber/Aprendizagem-.NET";
+  window.open(urlAPI);
+});
+
+buttonC.addEventListener("click", function openC() {
+  const urlC = "https://github.com/ckzwebber/Projetos-Faculdade-C-";
+  window.open(urlC);
+});
+
+const menuButton = document.getElementById("menu-button");
+const menu = document.getElementById("menu");
+
+menuButton.addEventListener("click", function () {
+  if (menu.style.opacity === "1") {
+    menu.style.opacity = "0";
+  } else {
+    menu.style.opacity = "1";
+  }
+});
+
+const menuItems = menu.querySelectorAll("li");
+menuItems.forEach((item) => {
+  item.addEventListener("click", function () {
+    menu.style.opacity = "0";
+  });
+});
