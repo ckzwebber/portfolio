@@ -24,6 +24,14 @@ a {
   opacity: 1;
 }
 
+#menu-button {
+  display: none;
+}
+
+#menu {
+  display: none;
+}
+
 #navbar {
   list-style: none;
   width: 100%;

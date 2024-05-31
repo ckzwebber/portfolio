@@ -58,7 +58,7 @@ function scrollToProjects() {
 }
 
 function scrollToContato() {
-  scrollToSection(".contato");
+  scrollToSection(".copy");
 }
 
 function checkVisibility() {
@@ -112,4 +112,15 @@ buttonAPI.addEventListener("click", function openAPI() {
 buttonC.addEventListener("click", function openC() {
   const urlC = "https://github.com/ckzwebber/Projetos-Faculdade-C-";
   window.open(urlC);
+});
+
+const menuButton = document.getElementById("menu-button");
+const menu = document.getElementById("menu");
+
+menuButton.addEventListener("click", function () {
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
 });
