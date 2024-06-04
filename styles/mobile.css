@@ -452,35 +452,6 @@ a {
   overflow: hidden;
 }
 
-.action {
-  display: inline-flex;
-  margin-top: 1rem;
-  color: #051119;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: 500;
-  align-items: center;
-  gap: 0.25rem;
-  background-color: #ffff;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-}
-
-.action span {
-  transition: 0.3s ease-in-out;
-}
-
-.action:hover {
-  background-color: #0099ff;
-}
-
-.action:hover span {
-  transform: translateX(0.25rem);
-}
-
 #btn-task {
   cursor: not-allowed;
 }
