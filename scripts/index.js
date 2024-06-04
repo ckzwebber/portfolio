@@ -100,20 +100,6 @@ function typeText(text, elementId) {
 
 typeText("FullStack Developer", "js-subtitle");
 
-const buttonAPI = document.getElementById("btn-api");
-const buttonC = document.getElementById("btn-c");
-const buttonTask = document.getElementById("btn-task");
-
-buttonAPI.addEventListener("click", function openAPI() {
-  const urlAPI = "https://github.com/ckzwebber/Aprendizagem-.NET";
-  window.open(urlAPI);
-});
-
-buttonC.addEventListener("click", function openC() {
-  const urlC = "https://github.com/ckzwebber/Projetos-Faculdade-C-";
-  window.open(urlC);
-});
-
 const menuButton = document.getElementById("menu-button");
 const menu = document.getElementById("menu");
 
