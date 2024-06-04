@@ -234,14 +234,14 @@ a {
 
 .tooltip-text {
   visibility: hidden;
-  background-color: #051119;
+  background-color: #0047ab;
   color: #fff;
   text-align: center;
   padding: 5px 10px;
   border-radius: 5px;
   position: absolute;
   z-index: 1;
-  bottom: 125%; /* Posiciona a tooltip acima do ícone */
+  bottom: 125%;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
@@ -310,7 +310,7 @@ a {
   font-size: 2rem;
   padding-bottom: 1.3rem;
   padding-top: 0.1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  text-shadow: 2px 2px 4px #0047ab;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -354,8 +354,8 @@ a {
   font-size: 2rem;
   padding-bottom: 1.3rem;
   padding-top: 0.1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-
+  text-shadow: 2px 2px 4px #0047ab;
+  margin: auto;
   display: flex;
   justify-content: center;
 }
@@ -440,35 +440,6 @@ a {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
-}
-
-.action {
-  display: inline-flex;
-  margin-top: 1rem;
-  color: #051119;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: 500;
-  align-items: center;
-  gap: 0.25rem;
-  background-color: #ffff;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-}
-
-.action span {
-  transition: 0.3s ease-in-out;
-}
-
-.action:hover {
-  background-color: #0099ff;
-}
-
-.action:hover span {
-  transform: translateX(0.25rem);
 }
 
 #btn-task {
@@ -604,7 +575,7 @@ a {
   left: 0;
   width: 100%;
   height: 0;
-  background-color: gray;
+  background-color: #0047ab;
   transition: all 0.3s ease-in-out;
 }
 .contato .icon-content a:hover .filled {
@@ -613,27 +584,11 @@ a {
 
 .contato .icon-content a[data-social="linkedin"] .filled,
 .contato .icon-content a[data-social="linkedin"] ~ .tooltip {
-  background-color: #0274b3;
+  background-color: #0047ab;
 }
 
 .contato .icon-content a[data-social="github"] ~ .tooltip {
-  background-color: gray;
-}
-.contato .icon-content a[data-social="instagram"] .filled,
-.contato .icon-content a[data-social="instagram"] ~ .tooltip {
-  background: linear-gradient(
-    45deg,
-    #405de6,
-    #5b51db,
-    #b33ab4,
-    #c135b4,
-    #e1306c,
-    #fd1f1f
-  );
-}
-.contato .icon-content a[data-social="youtube"] .filled,
-.contato .icon-content a[data-social="youtube"] ~ .tooltip {
-  background-color: #ff0000;
+  background-color: #0047ab;
 }
 
 .copy {
