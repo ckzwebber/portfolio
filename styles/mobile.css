@@ -428,7 +428,7 @@ a {
 }
 
 #btn-task {
-  cursor: not-allowed;
+  cursor: pointer;
 }
 
 #title-conquistas {

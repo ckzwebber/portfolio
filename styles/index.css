@@ -375,7 +375,7 @@ a {
 }
 
 .tf {
-  cursor: not-allowed;
+  cursor: pointer;
 }
 
 #title-conquistas {
