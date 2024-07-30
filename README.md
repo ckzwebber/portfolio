@@ -13,6 +13,7 @@ Você pode conferi-lo aqui: https://webberportfolio.netlify.app
     <li>🎓 <strong>Tecnologias</strong></li>
     <li>🚀 <strong>Projetos Em Destaque</strong></li>
     <li>💼 <strong>Experiência</strong></li>
+    <li>💻 <strong>Tecnologias: HTML, CSS e JS</strong></li>
   </ul>
 
 ## Contribuições
