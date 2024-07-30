@@ -7,13 +7,14 @@ Seja bem-vindo! Esse é o código-fonte do meu portfólio de desenvolvimento! Ne
 Meu portfólio é uma visão geral do meu aprendizado como estudante de Ciência da Computação na UNESC, bem como meu próprio estudo. Deixei alguns projetos desenvolvidos por mim, como trabalhos acadêmicos e projetos pessoais.
 Você pode conferi-lo aqui: https://webberportfolio.netlify.app
 
+- **Tecnologias:** HTML, CSS e JS.
+
 ## Conteúdo
 
   <ul>
-    <li>🎓 <strong>Tecnologias</strong></li>
+    <li>🎓 <strong>Minhas Tecnologias</strong></li>
     <li>🚀 <strong>Projetos Em Destaque</strong></li>
     <li>💼 <strong>Experiência</strong></li>
-    <li>💻 <strong>Tecnologias: HTML, CSS e JS</strong></li>
   </ul>
 
 ## Contribuições
