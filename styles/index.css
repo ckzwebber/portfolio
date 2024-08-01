@@ -3,6 +3,7 @@
   margin: 0;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
+  color: #ffffff;
 }
 
 ::-webkit-scrollbar {
@@ -14,65 +15,48 @@ a {
   color: #0047ab;
 }
 
-.aparecer {
+/* .show-when-see {
   opacity: 0;
   transition: opacity 1.5s ease, transform 1.5s ease;
-}
+} */
 
-.aparecer.show {
+.show-when-see.show {
   opacity: 1;
 }
 
-#menu-button {
+#navbar-mobile-menu {
   display: none;
 }
 
-#menu {
+#navbar-mobile-button {
   display: none;
 }
 
 #navbar {
-  list-style: none;
-  width: 100%;
   background: #051119;
-  text-align: center;
   transition: top 0.3s ease-in-out;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.navbar-content {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0;
-}
-
-.navbar-left {
-  font-size: 1rem;
-  color: #ffffff;
-}
-
-.navbar-center {
-  display: flex;
+  width: 100%;
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
-.li-navbar {
-  display: inline-block;
+#navbar-left {
+  width: 100%;
 }
 
-.btn-navbar {
-  display: inline-block;
+#navbar-right {
+  display: flex;
+  width: 100%;
+  justify-content: right;
+}
+
+.navbar-button {
   padding: 1rem 2rem;
   text-decoration: none;
   font-size: 1rem;
   color: #ffffff;
-  cursor: pointer;
   position: relative;
+  cursor: pointer;
   border: none;
   background: none;
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -80,19 +64,19 @@ a {
   transition-property: color;
 }
 
-.btn-navbar:focus,
-.btn-navbar:hover {
+.navbar-button:focus,
+.navbar-button:hover {
   color: #fff;
 }
 
-.btn-navbar:focus:after,
-.btn-navbar:hover:after,
-.btn-navbar.clicked:after {
+.navbar-button:focus:after,
+.navbar-button:hover:after,
+.navbar-button.clicked:after {
   width: 100%;
   left: 0%;
 }
 
-.btn-navbar:after {
+.navbar-button:after {
   content: "";
   pointer-events: none;
   bottom: -2px;
@@ -106,67 +90,43 @@ a {
   transition-property: width, left;
 }
 
-#container {
-  color: #ffff;
-  transition: all 0.5s ease;
-}
-
-.back {
-  background-image: url("../images/back.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.special-back {
-  padding-top: 8%;
+#home {
   background-image: url("/images/specialback.png");
-  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  padding-bottom: 13%;
-}
-
-.fix-cm {
+  height: 94vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  text-align: left;
-}
-
-.cm {
-  padding-top: 7%;
   justify-content: center;
 }
 
-.cm-subtitle {
-  font-size: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-  justify-content: left;
+#home-titles {
+  flex-direction: column;
+  padding-bottom: 4%;
 }
 
-.cm-title {
-  display: flex;
+#home-subtitle {
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+#home-title {
   font-size: 7rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
   font-weight: 600;
   letter-spacing: 0.1375rem;
   text-transform: uppercase;
-  word-spacing: none;
   line-height: 1;
 }
 
-.tooling-box {
+#tools {
   display: flex;
-  margin: auto;
-  flex-wrap: wrap;
   gap: 1.5rem;
   padding: 0.6rem;
-  padding-top: 4%;
+  padding-bottom: 3%;
 }
 
 .tool {
-  position: relative;
   background: #051119;
   width: 4.375rem;
   height: 4.375rem;
@@ -191,12 +151,11 @@ a {
   visibility: hidden;
   background-color: #0047ab;
   color: #fff;
-  text-align: center;
   padding: 5px 10px;
   border-radius: 5px;
   position: absolute;
   z-index: 1;
-  bottom: 125%; /* Posiciona a tooltip acima do ícone */
+  bottom: 125%;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
@@ -208,35 +167,29 @@ a {
   opacity: 1;
 }
 
-.chevrons {
+.arrows {
   padding: 0.375rem 0 0 0;
   margin-left: -0.1875rem;
   width: 1.875rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-bottom: 1rem;
   cursor: pointer;
-  margin: auto;
-  padding-top: 3%;
+  align-items: center;
 }
 
-.chevrondown {
-  margin-top: -0.1rem;
-  position: relative;
+.arrowsdown {
   border: solid;
   border-width: 0 0.25rem 0.25rem 0;
-  display: inline-block;
   width: 0.9rem;
   height: 0.9rem;
   transform: rotate(45deg);
 }
 
-.chevrondown:nth-child(odd) {
+.arrowsdown:nth-child(odd) {
   animation: pulse54012 700ms ease infinite alternate;
 }
 
-.chevrondown:nth-child(even) {
+.arrowsdown:nth-child(even) {
   animation: pulse54012 700ms ease infinite alternate 250ms;
 }
 
@@ -248,6 +201,13 @@ a {
   to {
     opacity: 0.5;
   }
+}
+
+.back {
+  background-image: url("../images/back.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .fix-sobre {
