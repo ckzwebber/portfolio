@@ -89,6 +89,8 @@
 
 #about-img {
   margin-top: 10%;
+  width: 65%;
+  height: 65%;
 }
 
 #projects {
@@ -105,7 +107,6 @@
 .projects-cards-line {
   flex-direction: column;
   gap: 1.8rem;
-  width: 105%;
 }
 
 .card-image {
@@ -115,15 +116,22 @@
 #courses {
   height: 100%;
   margin-top: 15%;
-  margin-bottom: 15%;
+  margin-bottom: 3%;
+  width: 100%;
 }
 
 .courses-line {
   flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+.course {
+  justify-content: center;
+  width: 100%;
 }
 
 #contact {
-  margin-top: 15%;
   margin-bottom: 0;
 }
 
