@@ -33,12 +33,7 @@ function scrollToPosition(targetPosition, duration) {
     t--;
     return (-c / 2) * (t * (t - 2) - 1) + b;
   }
-
   requestAnimationFrame(animation);
-}
-
-function scrollToTop() {
-  scrollToPosition(0, 1000);
 }
 
 function scrollToSection(selector) {
@@ -49,20 +44,24 @@ function scrollToSection(selector) {
   }
 }
 
+function scrollToHome() {
+  scrollToPosition(0, 1000);
+}
+
 function scrollToAbout() {
-  scrollToSection(".sobre");
+  scrollToSection("#about");
 }
 
 function scrollToProjects() {
-  scrollToSection(".projetos");
+  scrollToSection("#projects");
 }
 
-function scrollToContato() {
-  scrollToSection(".copy");
+function scrollToContact() {
+  scrollToSection("#footer");
 }
 
 function checkVisibility() {
-  const elements = document.querySelectorAll(".aparecer");
+  const elements = document.querySelectorAll(".show-when-see");
 
   elements.forEach((element) => {
     const position = element.getBoundingClientRect();
@@ -98,10 +97,10 @@ function typeText(text, elementId) {
   updateText();
 }
 
-typeText("FullStack Developer", "js-subtitle");
+typeText("FullStack Developer", "home-subtitle");
 
-const menuButton = document.getElementById("menu-button");
-const menu = document.getElementById("menu");
+const menuButton = document.getElementById("navbar-mobile-button");
+const menu = document.getElementById("navbar-mobile-menu");
 
 menuButton.addEventListener("click", function () {
   if (menu.style.opacity === "1") {
@@ -111,7 +110,7 @@ menuButton.addEventListener("click", function () {
   }
 });
 
-const menuItems = menu.querySelectorAll("li");
+const menuItems = menu.querySelectorAll("button");
 menuItems.forEach((item) => {
   item.addEventListener("click", function () {
     menu.style.opacity = "0";
