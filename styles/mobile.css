@@ -97,7 +97,7 @@
   height: 100%;
   width: 80%;
   margin-top: 25%;
-  margin-bottom: 15%;
+  padding-bottom: 25%;
 }
 
 #projects-title {
@@ -115,7 +115,7 @@
 
 #courses {
   height: 100%;
-  margin-top: 15%;
+  margin-top: 5%;
   margin-bottom: 3%;
   width: 100%;
 }
@@ -132,6 +132,7 @@
 }
 
 #contact {
+  margin-top: 5%;
   margin-bottom: 0;
 }
 
