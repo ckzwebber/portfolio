@@ -12,6 +12,7 @@
 }
 
 #navbar-mobile-menu {
+  width: 100%;
   transition: all 0.5s ease-in-out;
   display: flex;
   position: fixed;
@@ -28,6 +29,7 @@
   cursor: pointer;
   border: none;
   background: none;
+  width: 100%;
 }
 
 #home-subtitle {
@@ -89,7 +91,8 @@
 }
 
 #projects {
-  height: 200vh;
+  height: 230vh;
+  width: 80%;
 }
 
 #projects-title {
@@ -98,8 +101,18 @@
 
 .projects-cards-line {
   flex-direction: column;
+  gap: 1.8rem;
+  width: 105%;
+}
+
+.card-image {
+  width: 100%;
 }
 
 .courses-line {
   flex-direction: column;
+}
+
+#footer {
+  text-align: center;
 }
