@@ -1,118 +1,72 @@
+let navbar = document.getElementById("navbar");
+let menu = document.getElementById("navbar-mobile-menu");
+let menuButton = document.getElementById("navbar-mobile-button");
 let lastScrollTop = 0;
-const navbar = document.getElementById("navbar");
 
-window.addEventListener("scroll", () => {
-  let scrollTop = window.scrollY || document.documentElement.scrollTop;
+window.addEventListener("scroll", hideNavbar);
+window.addEventListener("scroll", youCanSee);
+window.addEventListener("load", youCanSee);
+window.addEventListener("load", writeSubtitle);
+menuButton.addEventListener("click", toggleMobileNavbar);
 
-  if (scrollTop > lastScrollTop && scrollTop > 50) {
+function hideNavbar() {
+  let nowScrollTop = window.scrollY;
+
+  if (nowScrollTop > 50 && nowScrollTop > lastScrollTop) {
     navbar.style.top = "-90px";
-    menu.style.opacity = "0";
+    menu.style.opacity = 0;
   } else {
     navbar.style.top = "0";
   }
 
-  lastScrollTop = scrollTop;
-});
-
-function scrollToPosition(targetPosition, duration) {
-  const startPosition = window.scrollY || document.documentElement.scrollTop;
-  const distance = targetPosition - startPosition;
-  let startTime = null;
-
-  function animation(currentTime) {
-    if (startTime === null) startTime = currentTime;
-    const timeElapsed = currentTime - startTime;
-    const run = ease(timeElapsed, startPosition, distance, duration);
-    window.scrollTo(0, run);
-    if (timeElapsed < duration) requestAnimationFrame(animation);
-  }
-
-  function ease(t, b, c, d) {
-    t /= d / 2;
-    if (t < 1) return (c / 2) * t * t + b;
-    t--;
-    return (-c / 2) * (t * (t - 2) - 1) + b;
-  }
-  requestAnimationFrame(animation);
+  lastScrollTop = nowScrollTop;
 }
 
-function scrollToSection(selector) {
-  const content = document.querySelector(selector);
-  if (content) {
-    const offset = content.getBoundingClientRect().top + window.scrollY;
-    scrollToPosition(offset, 1000);
+function scrollToThe(section) {
+  let position = document.getElementById(section);
+  if (position) {
+    window.scrollTo({ top: position.offsetTop, behavior: "smooth" });
   }
 }
 
-function scrollToHome() {
-  scrollToPosition(0, 1000);
-}
+function youCanSee() {
+  let component = document.querySelectorAll(".show-when-see");
 
-function scrollToAbout() {
-  scrollToSection("#about");
-}
+  component.forEach((component) => {
+    let page = component.getBoundingClientRect();
+    let pageHeight = window.innerHeight;
 
-function scrollToProjects() {
-  scrollToSection("#projects");
-}
-
-function scrollToContact() {
-  scrollToSection("#footer");
-}
-
-function checkVisibility() {
-  const elements = document.querySelectorAll(".show-when-see");
-
-  elements.forEach((element) => {
-    const position = element.getBoundingClientRect();
-    const windowHeight =
-      window.innerHeight || document.documentElement.clientHeight;
-
-    if (position.top <= windowHeight * 0.65) {
-      element.classList.add("show");
+    if (page.top <= pageHeight * 0.65) {
+      component.classList.add("show");
     }
   });
 }
 
-window.addEventListener("load", checkVisibility);
-window.addEventListener("scroll", checkVisibility);
+function writeSubtitle() {
+  let setText = "";
+  let text = "FullStack Developer";
+  let i = 0;
+  let cursor = document.getElementById("home-subtitle");
 
-function typeText(text, elementId) {
-  let currentText = "";
-  let index = 0;
-  const cursorElement = document.getElementById(elementId);
+  function updateSubtitle() {
+    if (i < text.length) {
+      setText += text[i];
+      cursor.textContent = setText + "|";
+      i++;
 
-  function updateText() {
-    if (index < text.length) {
-      currentText += text[index];
-      cursorElement.textContent = currentText + "|";
-      index++;
-
-      setTimeout(updateText, 300);
+      setTimeout(updateSubtitle, 300);
     } else {
-      cursorElement.textContent = currentText;
+      cursor.textContent = setText;
     }
   }
 
-  updateText();
+  updateSubtitle();
 }
 
-typeText("FullStack Developer", "home-subtitle");
-
-const menuButton = document.getElementById("navbar-mobile-button");
-const menu = document.getElementById("navbar-mobile-menu");
-
-menuButton.addEventListener("click", function () {
+function toggleMobileNavbar() {
   if (menu.style.opacity === "1") {
     menu.style.opacity = "0";
   } else {
     menu.style.opacity = "1";
   }
-});
-
-const menuItems = menu.querySelectorAll("button");
-menuItems.forEach((item) => {
-  item.addEventListener("click", function () {
-    menu.style.opacity = "0";
-  });
-});
+}

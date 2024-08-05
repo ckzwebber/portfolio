@@ -39,18 +39,20 @@
     <header>
       <nav id="navbar">
         <div id="navbar-left">
-          <button onclick="scrollToHome()" class="navbar-button">
+          <button onclick="scrollToThe('home')" class="navbar-button">
             Carlos Miguel
           </button>
         </div>
         <div id="navbar-right">
-          <button onclick="scrollToAbout()" class="navbar-button">Sobre</button>
+          <button onclick="scrollToThe('about')" class="navbar-button">
+            Sobre
+          </button>
 
-          <button onclick="scrollToProjects()" class="navbar-button">
+          <button onclick="scrollToThe('projects')" class="navbar-button">
             Projetos
           </button>
 
-          <button onclick="scrollToContact()" class="navbar-button">
+          <button onclick="scrollToThe('contact')" class="navbar-button">
             Contato
           </button>
 
@@ -60,15 +62,19 @@
 
       <nav id="navbar-mobile-menu">
         <div id="navbar-mobile-menu-itens">
-          <button onclick="scrollToAbout()" class="navbar-mobile-buttons">
+          <button onclick="scrollToThe('about')" class="navbar-mobile-buttons">
             Sobre
           </button>
           <br />
-          <button onclick="scrollToProjects()" class="navbar-mobile-buttons">
+          <button
+            onclick="scrollToThe('projects')"
+            class="navbar-mobile-buttons">
             Projetos
           </button>
           <br />
-          <button onclick="scrollToContact()" class="navbar-mobile-buttons">
+          <button
+            onclick="scrollToThe('contact')"
+            class="navbar-mobile-buttons">
             Contato
           </button>
         </div>
@@ -127,7 +133,7 @@
             <span class="tooltip-text">Figma</span>
           </div>
         </div>
-        <div onclick="scrollToAbout()" class="arrows">
+        <div onclick="scrollToThe('about')" class="arrows">
           <div class="arrowsdown show-when-see"></div>
           <div class="arrowsdown show-when-see"></div>
         </div>
