@@ -6,8 +6,10 @@
   color: #ffffff;
 }
 
-body {
+body, html {
   background: #051119;
+  height: 100%;
+  margin: 0;
 }
 
 ::-webkit-scrollbar {
@@ -60,28 +62,18 @@ a {
 
 .navbar-button {
   padding: 1rem 2rem;
-  text-decoration: none;
   font-size: 1rem;
-  color: #ffffff;
   position: relative;
   cursor: pointer;
   border: none;
   background: none;
-  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition-duration: 400ms;
-  transition-property: color;
-}
-
-.navbar-button:focus,
-.navbar-button:hover {
-  color: #fff;
 }
 
 .navbar-button:focus:after,
 .navbar-button:hover:after,
 .navbar-button.clicked:after {
   width: 100%;
-  left: 0%;
+  left: 0;
 }
 
 .navbar-button:after {
@@ -90,7 +82,7 @@ a {
   bottom: -2px;
   left: 50%;
   position: absolute;
-  width: 0%;
+  width: 0;
   height: 2px;
   background-color: #fff;
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -101,28 +93,21 @@ a {
 #home {
   background-image: url("/images/specialback.png");
   background-position: center;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
 }
 
 #home-titles {
-  flex-direction: column;
   padding-bottom: 4%;
   padding-top: 3%;
-}
-
-#home-subtitle {
-  font-size: 1.5rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
 #home-title {
   font-size: 7rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-  font-weight: 600;
   letter-spacing: 0.1375rem;
   text-transform: uppercase;
   line-height: 1;
@@ -131,18 +116,14 @@ a {
 #tools {
   display: flex;
   gap: 1.5rem;
-  padding: 0.6rem;
-  padding-bottom: 3%;
+  padding: 0.6rem 0.6rem 60px;
 }
 
 .tool {
   background: #051119;
-  width: 4.375rem;
-  height: 4.375rem;
+    padding: 0.94rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 8px;
+  border-radius: 10px;
   transition: transform 0.3s;
 }
 
@@ -158,32 +139,25 @@ a {
 }
 
 .tooltip-text {
-  visibility: hidden;
   background-color: #0047ab;
   padding: 5px 10px;
   border-radius: 5px;
   position: absolute;
-  z-index: 1;
   bottom: 125%;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.15s;
 }
 
 .tool:hover .tooltip-text {
-  visibility: visible;
   opacity: 1;
 }
 
 .arrows {
-  padding: 0.375rem 0 0 0;
+  padding: 0.375rem 0;
   margin-left: -0.1875rem;
-  width: 1.875rem;
-  display: flex;
-  flex-direction: column;
   cursor: pointer;
-  align-items: center;
 }
 
 .arrowsdown {
@@ -206,7 +180,6 @@ a {
   from {
     opacity: 0;
   }
-
   to {
     opacity: 0.5;
   }
@@ -215,7 +188,6 @@ a {
 #background {
   background-image: url("../images/back.png");
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -223,13 +195,13 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
-  height: 100vh;
   width: 60%;
   margin: auto;
+  min-height: 100vh;
 }
 
 #about-content {
+  margin-bottom: 50px;
   display: flex;
   align-items: center;
 }
@@ -237,12 +209,13 @@ a {
 #about-title {
   font-size: 2.5rem;
   text-shadow: 2px 2px 4px #0047ab;
-  padding-bottom: 3%;
+  padding-bottom: 2rem;
+  margin-top: 50px;
 }
 
 #about-text {
   text-align: justify;
-  margin-right: 9%;
+  margin-right: 5rem;
   font-size: 1.2rem;
   text-indent: 1.875rem;
   line-height: 1.7;
@@ -250,7 +223,6 @@ a {
 
 #about-img {
   border-radius: 50%;
-  height: auto;
 }
 
 #projects {
@@ -258,27 +230,27 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100%;
-  margin: auto;
+  min-height: 100vh;
 }
 
 #projects-title {
   font-size: 2.5rem;
-  padding-bottom: 1.3rem;
+  margin-bottom: 4.3rem;
   text-shadow: 2px 2px 4px #0047ab;
 }
 
-.projects-cards-line {
+.projects-cards {
   display: flex;
+  justify-content: space-around;
+  width: 75%;
+  flex-wrap: wrap;
   gap: 2.5rem;
-  margin-top: 2.5rem;
 }
 
 .projects-card {
   max-width: 25rem;
   max-height: 20.38rem;
-  border-radius: 0.5rem;
+  border-radius: 5px;
   background-color: #051119;
   box-shadow: 0.1875rem 0.1875rem 0.1875rem 0.1875rem rgba(0, 0, 0, 0.05);
   transition: 0.3s ease-in-out;
@@ -296,28 +268,25 @@ a {
 
 .card-image {
   object-fit: cover;
-  width: 400px;
+  width: 100%;
   height: 150px;
-  border-radius: 0.3125rem 0.3125rem 0 0;
+  border-radius: 5px 5px 0 0;
 }
 
 .card-title {
   font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-weight: 600;
   text-shadow: 1px 1px 2px #0047ab;
 }
 
 .card-description {
-  margin-top: 0.5rem;
+  margin-top: 0.6rem;
   font-size: 0.875rem;
-  line-height: 1.25rem;
   text-align: justify;
   overflow: hidden;
 }
 
 #courses {
-  margin-top: 5%;
+  margin-top: 6rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -328,26 +297,24 @@ a {
   justify-content: center;
 }
 
-.courses-line {
+.courses {
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  margin: auto;
-  margin-top: 30px;
-  gap: 30px;
+  flex-wrap: wrap;
+  width: 75%;
+  margin: 50px auto;
+  gap: 40px;
 }
 
 .course {
   width: 320px;
-  padding: 12px;
-  padding-bottom: 20px;
-  padding-top: 20px;
+  padding: 20px 12px;
   display: flex;
   justify-content: center;
   background: #051119;
   border-radius: 5px;
-  box-shadow: 0px 0px 5px -3px #111;
   transition: transform 0.3s;
+  font-size: 18px;
 }
 
 .course:hover {
@@ -358,22 +325,12 @@ a {
 .course-icon {
   width: 20px;
   height: 20px;
-  padding-top: 4px;
+  margin-top: 4px;
   margin-right: 8px;
-  color: white;
-}
-
-.course-icon path {
-  fill: #fff;
-}
-
-.course-title {
-  font-size: 18px;
 }
 
 #contact {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   height: 25vh;
   margin-top: 5%;
@@ -388,7 +345,7 @@ a {
   display: flex;
   justify-content: center;
   gap: 20px;
-  padding: 25px;
+  margin: 25px;
 }
 
 .contact-button {
@@ -396,13 +353,11 @@ a {
   height: 45px;
   display: flex;
   align-items: center;
-  justify-content: center;
   border: none;
   background-color: transparent;
   position: relative;
   border-radius: 5px;
   cursor: pointer;
-  transition: all 0.3s;
 }
 
 .contact-svg {
@@ -411,7 +366,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 5px;
   z-index: 1;
 }
 

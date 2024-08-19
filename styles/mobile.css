@@ -10,7 +10,6 @@
   display: flex;
   padding: 0.9rem 1.8rem;
   font-size: 0.9rem;
-  cursor: pointer;
   border: none;
   background: none;
 }
@@ -38,38 +37,30 @@
 #home-subtitle {
   display: flex;
   justify-content: center;
-  font: 0.8rem;
 }
 
 #home-title {
   font-size: 2.5rem;
-  letter-spacing: 0.1rem;
-  line-height: 0.9;
 }
 
 #tools {
-  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.6rem;
-  padding-bottom: 4%;
+  padding: 1rem 0.6rem;
 }
 
 .tool {
-  width: 3.375rem;
-  height: 3.375rem;
+  padding: 0.6rem;
 }
 
 .tool img {
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 #about {
-  height: 100%;
   width: 80%;
-  margin: auto;
 }
 
 #about-content {
@@ -91,47 +82,11 @@
 }
 
 #about-img {
-  margin-top: 10%;
-  width: 65%;
-  height: 65%;
-}
-
-#projects {
-  height: 100%;
-  width: 80%;
-  margin-top: 25%;
-  padding-bottom: 25%;
+  margin-top: 50px;
 }
 
 #projects-title {
   font-size: 1.5rem;
-}
-
-.projects-cards-line {
-  flex-direction: column;
-  gap: 1.8rem;
-}
-
-.card-image {
-  width: 100%;
-}
-
-#courses {
-  height: 100%;
-  margin-top: 5%;
-  margin-bottom: 3%;
-  width: 100%;
-}
-
-.courses-line {
-  flex-direction: column;
-  align-items: center;
-  width: 80%;
-}
-
-.course {
-  justify-content: center;
-  width: 100%;
 }
 
 #contact {
