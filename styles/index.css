@@ -93,6 +93,7 @@ a {
 #home {
   background-image: url("/images/specialback.png");
   background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
