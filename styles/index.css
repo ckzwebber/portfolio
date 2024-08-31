@@ -129,9 +129,8 @@ a {
   transition: transform 0.3s;
 }
 
-.tool img {
-  width: 2.5rem;
-  height: 2.5rem;
+.tool i {
+  font-size: 40px;
 }
 
 .tool:hover {
