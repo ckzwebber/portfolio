@@ -12,6 +12,7 @@
   font-size: 0.9rem;
   border: none;
   background: none;
+  color: #010409;
 }
 
 #navbar-mobile-menu {
@@ -20,7 +21,6 @@
   display: flex;
   position: fixed;
   justify-content: center;
-  background: #051119;
   text-align: center;
   opacity: 0;
 }
@@ -32,6 +32,7 @@
   border: none;
   background: none;
   width: 100%;
+  color: #010409;
 }
 
 #home-subtitle {
@@ -84,8 +85,17 @@
   margin-top: 50px;
 }
 
+.experience-item {
+  padding: 20px;
+  min-width: 300px;
+}
+
 #projects-title {
   font-size: 1.5rem;
+}
+
+.course {
+  font-size: 14px;
 }
 
 #contact {

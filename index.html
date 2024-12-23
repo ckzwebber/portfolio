@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-6NWF4BXV97"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6NWF4BXV97"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -15,25 +13,13 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="author" content="Carlos Miguel Webber" />
-    <meta
-      name="description"
-      content="Carlos Miguel Webber, Desenvolvedor FullStack, Progamador, Web, Portfólio" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="Carlos Miguel Webber, Desenvolvedor FullStack, Progamador, Web, Portfólio" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <link rel="stylesheet" type="text/css" href="/styles/index.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    <link
-      rel="stylesheet"
-      media="screen and (max-width: 1350px)"
-      href="/styles/mobile.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" media="screen and (max-width: 1350px)" href="/styles/mobile.css" />
     <link rel="icon" href="/images/icontop.png" type="image/x-icon" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -47,44 +33,26 @@
     <header>
       <nav id="navbar">
         <div id="navbar-left">
-          <button onclick="scrollToThe('home')" class="navbar-button">
-            Carlos Miguel
-          </button>
+          <button onclick="scrollToThe('home')" class="navbar-button">Carlos Miguel</button>
         </div>
         <div id="navbar-right">
-          <button onclick="scrollToThe('about')" class="navbar-button">
-            Sobre
-          </button>
-
-          <button onclick="scrollToThe('projects')" class="navbar-button">
-            Projetos
-          </button>
-
-          <button onclick="scrollToThe('contact')" class="navbar-button">
-            Contato
-          </button>
-
+          <button onclick="scrollToThe('about')" class="navbar-button">Sobre</button>
+          <button onclick="scrollToThe('experience')" class="navbar-button">Experiência</button>
+          <button onclick="scrollToThe('projects')" class="navbar-button">Projetos</button>
+          <button onclick="scrollToThe('contact')" class="navbar-button">Contato</button>
           <button id="navbar-mobile-button">&#9776;</button>
         </div>
       </nav>
 
       <nav id="navbar-mobile-menu">
         <div id="navbar-mobile-menu-itens">
-          <button onclick="scrollToThe('about')" class="navbar-mobile-buttons">
-            Sobre
-          </button>
+          <button onclick="scrollToThe('about')" class="navbar-mobile-buttons">Sobre</button>
           <br />
-          <button
-            onclick="scrollToThe('projects')"
-            class="navbar-mobile-buttons">
-            Projetos
-          </button>
+          <button onclick="scrollToThe('experience')" class="navbar-mobile-buttons">Experiência</button>
           <br />
-          <button
-            onclick="scrollToThe('contact')"
-            class="navbar-mobile-buttons">
-            Contato
-          </button>
+          <button onclick="scrollToThe('projects')" class="navbar-mobile-buttons">Projetos</button>
+          <br />
+          <button onclick="scrollToThe('contact')" class="navbar-mobile-buttons">Contato</button>
         </div>
       </nav>
     </header>
@@ -143,22 +111,37 @@
           <h2 id="about-title">FullSatck Developer</h2>
           <article id="about-content">
             <div id="about-text">
-              <p>
-                Seja bem-vindo! Me chamo Carlos Miguel, tenho 18 anos e sou
-                desenvolvedor FullStack.
-              </p>
-              <p>
-                Estou cursando Ciência da Computação na UNESC, aprimorando
-                minhas habilidades e conhecimentos na área da tecnologia.
-              </p>
-              <p>
-                Estou constantemente trabalhando no desenvolvimento web em busca
-                de novos desafios para expandir minha experiência profissional.
-              </p>
+              <p>Seja bem-vindo! Me chamo Carlos Miguel, tenho 18 anos e sou desenvolvedor FullStack.</p>
+              <p>Estou cursando Ciência da Computação na UNESC, aprimorando minhas habilidades e conhecimentos na área da tecnologia.</p>
+              <p>Estou constantemente trabalhando no desenvolvimento web em busca de novos desafios para expandir minha experiência profissional.</p>
             </div>
 
             <img src="images/perfil.jpg" alt="Perfil Picture" id="about-img" />
           </article>
+        </section>
+
+        <section id="experience" class="show-when-see">
+          <h2 id="experience-title">Minha Experiência</h2>
+          <div class="experience-timeline">
+            <div class="experience-item">
+              <span class="experience-date">09/2022 - Presente</span>
+              <h3 class="experience-title">Desenvolvedor Web FullStack</h3>
+              <p class="experience-company">La Moda</p>
+              <p class="experience-description">Desenvolvimento Web utilizando React, Node.js e banco de dados SQL.</p>
+            </div>
+            <div class="experience-item">
+              <span class="experience-date">08/2024 - 09/2024</span>
+              <h3 class="experience-title">Desenvolvedor de Software</h3>
+              <p class="experience-company">Useall Software</p>
+              <p class="experience-description">Desenvolvimento de software utilizando Python e C#.</p>
+            </div>
+            <div class="experience-item">
+              <span class="experience-date">02/2023 - 02/2024</span>
+              <h3 class="experience-title">Técnico de TI</h3>
+              <p class="experience-company">MDS Informática</p>
+              <p class="experience-description">Manutenção de Computadores, Redes e Impressoras.</p>
+            </div>
+          </div>
         </section>
 
         <section id="projects" class="show-when-see">
@@ -167,15 +150,11 @@
           <article class="projects-cards">
             <div class="projects-card">
               <a href="https://webberlamborghini.netlify.app/" target="_blank">
-                <img
-                  src="images/lamb.png"
-                  class="card-image"
-                  alt="Lamborghini Project" />
+                <img src="images/lamb.png" class="card-image" alt="Lamborghini Project" />
                 <div class="card-content">
                   <h4 class="card-title">Lamborghini Project</h4>
                   <p class="card-description">
-                    Desenvolvi esse website utilizando React e diversas
-                    features, contando com diferentes páginas e designs.
+                    Desenvolvi esse website utilizando React e diversas features, contando com diferentes páginas e designs.
                   </p>
                 </div>
               </a>
@@ -187,8 +166,7 @@
                 <div class="card-content">
                   <h4 class="card-title">Timer</h4>
                   <p class="card-description">
-                    Desenvolvi esse timer que permite você configurar e
-                    controlar um temporizador personalizado no seu navegador.
+                    Desenvolvi esse timer que permite você configurar e controlar um temporizador personalizado no seu navegador.
                   </p>
                 </div>
               </a>
@@ -200,27 +178,19 @@
                 <div class="card-content">
                   <h4 class="card-title">Portfólio</h4>
                   <p class="card-description">
-                    Criei esse site utilizando HTML, CSS e JavaScript para
-                    praticar e demonstrar minhas habilidades em frontend.
+                    Criei esse site utilizando HTML, CSS e JavaScript para praticar e demonstrar minhas habilidades em frontend.
                   </p>
                 </div>
               </a>
             </div>
 
             <div class="projects-card">
-              <a
-                href="https://github.com/ckzwebber/WalletWatch"
-                target="_blank">
-                <img
-                  src="images/wallet.png"
-                  class="card-image"
-                  alt="WalletWatch" />
+              <a href="https://github.com/ckzwebber/WalletWatch" target="_blank">
+                <img src="images/wallet.png" class="card-image" alt="WalletWatch" />
                 <div class="card-content">
                   <h4 class="card-title">WalletWatch</h4>
                   <p class="card-description">
-                    Desenvolvi esse app mobile que permite que você acompanhe a
-                    variação de preços de diversas moedas em relação ao BRL em
-                    tempo real.
+                    Desenvolvi esse app mobile que permite que você acompanhe a variação de preços de diversas moedas em relação ao BRL em tempo real.
                   </p>
                 </div>
               </a>
@@ -228,15 +198,11 @@
 
             <div class="projects-card">
               <a href="https://webbergametracker.netlify.app/" target="_blank">
-                <img
-                  src="images/game.png"
-                  class="card-image"
-                  alt="GameTracker" />
+                <img src="images/game.png" class="card-image" alt="GameTracker" />
                 <div class="card-content">
                   <h4 class="card-title">GameTracker</h4>
                   <p class="card-description">
-                    Desenvolvi esse game tracker para poder acompanhar os jogos
-                    que joguei e estou jogando, minha avaliação e horas jogadas!
+                    Desenvolvi esse game tracker para poder acompanhar os jogos que joguei e estou jogando, minha avaliação e horas jogadas!
                   </p>
                 </div>
               </a>
@@ -247,10 +213,7 @@
                 <img src="images/clock.png" class="card-image" alt="Clock" />
                 <div class="card-content">
                   <h4 class="card-title">Clock</h4>
-                  <p class="card-description">
-                    Esse simples relógio exibe a hora e a data do seu computador
-                    no navegador!
-                  </p>
+                  <p class="card-description">Esse simples relógio exibe a hora e a data do seu computador no navegador!</p>
                 </div>
               </a>
             </div>
@@ -261,8 +224,7 @@
                 <div class="card-content">
                   <h4 class="card-title">Node API</h4>
                   <p class="card-description">
-                    Criei uma API RESTful em NodeJS e banco de dados PostgreSQL.
-                    Ela permite o CRUD de usuários com hash de senhas.
+                    Criei uma API RESTful em NodeJS e banco de dados PostgreSQL. Ela permite o CRUD de usuários com hash de senhas.
                   </p>
                 </div>
               </a>
@@ -274,24 +236,19 @@
                 <div class="card-content">
                   <h4 class="card-title">TaskForge</h4>
                   <p class="card-description">
-                    Novo projeto a caminho: TaskForge é um ToDo list na web com
-                    CRUD de tarefas e usuários. Ainda em desenvolvimento.
+                    Novo projeto a caminho: TaskForge é um ToDo list na web com CRUD de tarefas e usuários. Ainda em desenvolvimento.
                   </p>
                 </div>
               </a>
             </div>
 
             <div class="projects-card">
-              <a
-                href="https://github.com/ckzwebber/Aprendizagem-.NET"
-                target="_blank">
+              <a href="https://github.com/ckzwebber/Aprendizagem-.NET" target="_blank">
                 <img src="images/api.png" class="card-image" alt="C# API" />
                 <div class="card-content">
                   <h4 class="card-title">C# API</h4>
                   <p class="card-description">
-                    Desenvolvi uma API RESTful em .NET com C# e banco de dados
-                    SQL Server, com diversas funções e métodos para manipulação
-                    de dados.
+                    Desenvolvi uma API RESTful em .NET com C# e banco de dados SQL Server, com diversas funções e métodos para manipulação de dados.
                   </p>
                 </div>
               </a>
@@ -299,84 +256,72 @@
           </article>
         </section>
 
-        <section id="courses" class="show-when-see">
-          <h3 id="courses-title">Cursos, Conquistas e Experiência</h3>
+        <div id="courses-contact-background">
+          <section id="courses" class="show-when-see">
+            <h3 id="courses-title">Cursos e Conquistas</h3>
 
-          <article class="courses">
-            <div class="course">
-              <img src="/images/vs.svg" class="course-icon" alt="CS50" />
-              <p>CS50 - Harvard</p>
+            <article class="courses">
+              <div class="course">
+                <img src="/images/vs.svg" class="course-icon" alt="CS50" />
+                <p>CS50 - Harvard</p>
+              </div>
+
+              <div class="course">
+                <img src="/images/js.svg" class="course-icon" alt="Web Development" />
+                <p>Curso.dev - Filipe Deschamps</p>
+              </div>
+
+              <div class="course">
+                <img src="/images/cs.svg" class="course-icon" alt=".NET" />
+                <p>.NET Developer - DIO</p>
+              </div>
+
+              <div class="course">
+                <img src="/images/trofeu.svg" class="course-icon" alt="OBMEP" />
+                <p>3x Menções Honrosas - OBMEP</p>
+              </div>
+
+              <div class="course">
+                <img src="/images/java.svg" class="course-icon" alt="DevTheDevs" />
+                <p>Web Development - Udemy</p>
+              </div>
+
+              <div class="course">
+                <img src="/images/work.svg" class="course-icon" alt="Técnico de TI" />
+                <p>DevTheDevs - PUCRS</p>
+              </div>
+            </article>
+          </section>
+
+          <section id="contact">
+            <h3 id="contact-title">Entre em contato:</h3>
+            <div id="contact-itens">
+              <a href="https://github.com/ckzwebber" target="_blank">
+                <button class="contact-button github">
+                  <span class="contact-svg">
+                    <svg height="1.6em" viewBox="0 0 496 512" fill="white">
+                      <path
+                        d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path>
+                    </svg>
+                  </span>
+                  <span class="contact-svg-background"></span>
+                </button>
+              </a>
+
+              <a href="https://www.linkedin.com/in/cmiguelwm/" target="_blank">
+                <button class="contact-button linkdin">
+                  <span class="contact-svg">
+                    <svg fill="white" class="svgIcon" xmlns="http://www.w3.org/2000/svg" height="1.6em" viewBox="0 0 448 512">
+                      <path
+                        d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"></path>
+                    </svg>
+                  </span>
+                  <span class="contact-svg-background"></span>
+                </button>
+              </a>
             </div>
-
-            <div class="course">
-              <img
-                src="/images/js.svg"
-                class="course-icon"
-                alt="Web Development" />
-              <p>Web Development - Udemy</p>
-            </div>
-
-            <div class="course">
-              <img src="/images/cs.svg" class="course-icon" alt=".NET" />
-              <p>.NET Developer - DIO</p>
-            </div>
-
-            <div class="course">
-              <img src="/images/trofeu.svg" class="course-icon" alt="OBMEP" />
-              <p>3x Menções Honrosas - OBMEP</p>
-            </div>
-
-            <div class="course">
-              <img
-                src="/images/java.svg"
-                class="course-icon"
-                alt="DevTheDevs" />
-              <p>DevTheDevs - PUCRS</p>
-            </div>
-
-            <div class="course">
-              <img
-                src="/images/work.svg"
-                class="course-icon"
-                alt="Técnico de TI" />
-              <p>1 ano - Técnico de TI</p>
-            </div>
-          </article>
-        </section>
-
-        <section id="contact">
-          <h3 id="contact-title">Entre em contato:</h3>
-          <div id="contact-itens">
-            <a href="https://github.com/ckzwebber" target="_blank">
-              <button class="contact-button github">
-                <span class="contact-svg">
-                  <svg height="1.6em" viewBox="0 0 496 512" fill="white">
-                    <path
-                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path>
-                  </svg>
-                </span>
-                <span class="contact-svg-background"></span>
-              </button>
-            </a>
-
-            <a href="https://www.linkedin.com/in/cmiguelwm/" target="_blank">
-              <button class="contact-button linkdin">
-                <span class="contact-svg">
-                  <svg
-                    fill="white"
-                    class="svgIcon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="1.6em"
-                    viewBox="0 0 448 512">
-                    <path
-                      d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"></path>
-                  </svg>
-                </span>
-                <span class="contact-svg-background"></span>
-              </button>
-            </a>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
     </main>
     <footer id="footer">
