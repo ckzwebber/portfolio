@@ -87,7 +87,8 @@
 
 .experience-item {
   padding: 20px;
-  min-width: 300px;
+  min-width: 350px;
+  max-width: 350px;
 }
 
 #projects-title {
