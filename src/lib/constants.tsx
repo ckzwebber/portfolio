@@ -72,7 +72,7 @@ export const projects = [
   {
     title: "UNESC FIPE Web Search",
     description: "Projeto web que permite consultar e exibir modelos de carros da Tabela FIPE.",
-    image: "https://pixabay.com/get/g6a9a65ff09f049b34d04ddd01bb186ace91da6d02bfa8721797f40cc65a183f1d8173db88c1dce6ddfd48bdfe014752a792144ccf42d2b77bb1b114efdb726b3_1280.jpg",
+    image: "https://images.unsplash.com/photo-1508974239320-0a029497e820?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     technologies: ["JavaScript", "HTML", "CSS", "API"],
     techColors: ["bg-yellow-500/20 text-yellow-400", "bg-orange-500/20 text-orange-400", "bg-blue-500/20 text-blue-400", "bg-green-500/20 text-green-400"],
     github: "https://github.com/ckzwebber/unesc-fipe-web-search",
