@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { personalInfo, contactInfo } from "@/lib/constants";
+import { contactInfo } from "@/lib/constants";
 import emailjs from "@emailjs/browser";
 
 interface ContactForm {
@@ -17,6 +17,9 @@ interface ContactForm {
 
 export default function ContactSection() {
   const { toast } = useToast();
+  const emailPublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+  const emailServiceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const emailTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
   const [copiedItem, setCopiedItem] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState<ContactForm>({
@@ -65,11 +68,10 @@ export default function ContactSection() {
         subject: formData.subject,
         message: formData.message,
         to_name: "Carlos Miguel",
+        time: new Date().toISOString(),
       };
 
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-
-      // await emailjs.send('SERVICE_ID', 'TEMPLATE_ID', templateParams, 'PUBLIC_KEY');
+      await emailjs.send(emailServiceId, emailTemplateId, templateParams, emailPublicKey);
 
       toast({
         title: "Mensagem enviada!",
