@@ -1,16 +1,19 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Github, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { projects } from "@/lib/constants";
+import { Trans, useTranslation } from "react-i18next";
 
 export default function ProjectsSection() {
   const [activeFilter, setActiveFilter] = useState("all");
+  const { i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const filters = [
-    { key: "all", label: "Todos" },
-    { key: "fullstack", label: "Full Stack" },
-    { key: "backend", label: "Backend" },
-    { key: "tools", label: "Tools" },
+    { key: "all", label: t("filter-all") },
+    { key: "fullstack", label: t("filter-fullstack") },
+    { key: "backend", label: t("filter-backend") },
+    { key: "tools", label: t("filter-tools") },
   ];
 
   const filteredProjects = activeFilter === "all" ? projects : projects.filter((project) => project.category === activeFilter);
@@ -20,10 +23,10 @@ export default function ProjectsSection() {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16 reveal">
           <h2 className="text-4xl md:text-5xl font-bold mb-6" data-testid="projects-title">
-            Meus <span className="gradient-text">Projetos</span>
+            <Trans i18nKey="projects-title" components={[<span className="gradient-text" />]} />
           </h2>
           <p className="text-xl text-text-light max-w-3xl mx-auto" data-testid="projects-subtitle">
-            Uma seleção dos meus projetos mais interessantes e tecnicamente desafiadores.
+            {t("projects-subtitle")}
           </p>
         </div>
 
@@ -51,7 +54,7 @@ export default function ProjectsSection() {
                 </h3>
 
                 <p className="text-text-light mb-4" data-testid={`project-description-${index}`}>
-                  {project.description}
+                  {i18n.language === "en" ? project.descriptionEn : project.description}
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -65,7 +68,7 @@ export default function ProjectsSection() {
                 <div className="flex space-x-4">
                   <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center text-text-light hover:text-primary transition-colors" data-testid={`project-github-${index}`}>
                     <Github className="mr-2 h-4 w-4" />
-                    Código
+                    {t("project-code")}
                   </a>
                   {project.demo && (
                     <a href={project.demo} target="_blank" rel="noopener noreferrer" className="flex items-center text-text-light hover:text-primary transition-colors" data-testid={`project-demo-${index}`}>
@@ -93,7 +96,7 @@ export default function ProjectsSection() {
             className="inline-flex items-center px-8 py-3 glass-light hover:bg-primary hover:text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105"
             data-testid="view-all-projects">
             <Github className="mr-2 h-4 w-4" />
-            Ver Todos os Projetos
+            {t("view-all-projects")}
           </a>
         </div>
       </div>

@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { contactInfo } from "@/lib/constants";
 import emailjs from "@emailjs/browser";
+import { useTranslation, Trans } from "react-i18next";
 
 interface ContactForm {
   name: string;
@@ -16,6 +17,7 @@ interface ContactForm {
 }
 
 export default function ContactSection() {
+  const { t } = useTranslation();
   const { toast } = useToast();
   const emailPublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
   const emailServiceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
@@ -34,14 +36,14 @@ export default function ContactSection() {
       await navigator.clipboard.writeText(text);
       setCopiedItem(label);
       toast({
-        title: "Copiado!",
-        description: `${label} copiado para a área de transferência.`,
+        title: t("copy-success-title"),
+        description: t("copy-success-description", { label }),
       });
       setTimeout(() => setCopiedItem(null), 2000);
     } catch (err) {
       toast({
-        title: "Erro ao copiar",
-        description: "Não foi possível copiar para a área de transferência.",
+        title: t("copy-error-title"),
+        description: t("copy-error-description"),
         variant: "destructive",
       });
     }
@@ -52,8 +54,8 @@ export default function ContactSection() {
 
     if (!formData.name || !formData.email || !formData.subject || !formData.message) {
       toast({
-        title: "Campos obrigatórios",
-        description: "Por favor, preencha todos os campos obrigatórios.",
+        title: t("required-fields-title"),
+        description: t("required-fields-description"),
         variant: "destructive",
       });
       return;
@@ -74,16 +76,16 @@ export default function ContactSection() {
       await emailjs.send(emailServiceId, emailTemplateId, templateParams, emailPublicKey);
 
       toast({
-        title: "Mensagem enviada!",
-        description: "Sua mensagem foi enviada com sucesso. Retornarei em breve!",
+        title: t("submit-success-title"),
+        description: t("submit-success-description"),
       });
 
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
       console.error("Contact form error:", error);
       toast({
-        title: "Erro ao enviar mensagem",
-        description: "Ocorreu um erro ao enviar sua mensagem. Tente novamente mais tarde.",
+        title: t("submit-error-title"),
+        description: t("submit-error-description"),
         variant: "destructive",
       });
     } finally {
@@ -100,10 +102,10 @@ export default function ContactSection() {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 reveal">
           <h2 className="text-4xl md:text-5xl font-bold mb-6" data-testid="contact-title">
-            Vamos <span className="gradient-text">Conversar</span>
+            <Trans i18nKey="contact-title" components={[<span className="gradient-text" />]} />
           </h2>
           <p className="text-xl text-text-light max-w-3xl mx-auto" data-testid="contact-subtitle">
-            Estou sempre aberto a discutir novas oportunidades, projetos interessantes ou apenas bater um papo sobre tecnologia.
+            {t("contact-subtitle")}
           </p>
         </div>
 
@@ -111,7 +113,7 @@ export default function ContactSection() {
           <div className="reveal">
             <div className="glass rounded-2xl p-8">
               <h3 className="text-2xl font-bold mb-8 text-primary" data-testid="contact-info-title">
-                Informações de Contato
+                {t("contact-info-title")}
               </h3>
 
               <div className="space-y-6">
@@ -137,7 +139,7 @@ export default function ContactSection() {
 
               <div className="mt-8 pt-8 border-t border-dark-border">
                 <h4 className="font-semibold text-foreground mb-4" data-testid="quick-copy-title">
-                  Cópia Rápida
+                  {t("quick-copy-title")}
                 </h4>
                 <div className="flex flex-wrap gap-3">
                   {contactInfo.map((info, index) => (
@@ -149,7 +151,7 @@ export default function ContactSection() {
                       className="glass-light hover:bg-primary transition-colors text-sm"
                       data-testid={`copy-btn-${index}`}>
                       {copiedItem === info.label ? <Check className="mr-2 h-3 w-3" /> : <Copy className="mr-2 h-3 w-3" />}
-                      {copiedItem === info.label ? "Copiado!" : info.label}
+                      {copiedItem === info.label ? t("copy-button-copied") : info.label}
                     </Button>
                   ))}
                 </div>
@@ -160,20 +162,20 @@ export default function ContactSection() {
           <div className="reveal">
             <div className="glass rounded-2xl p-8">
               <h3 className="text-2xl font-bold mb-8 text-primary" data-testid="contact-form-title">
-                Envie uma Mensagem
+                {t("contact-form-title")}
               </h3>
 
               <form onSubmit={handleSubmit} className="space-y-6" data-testid="contact-form">
                 <div>
                   <Label htmlFor="name" className="block text-foreground font-medium mb-2">
-                    Nome *
+                    {t("label-name")}
                   </Label>
                   <Input
                     id="name"
                     type="text"
                     value={formData.name}
                     onChange={(e) => handleInputChange("name", e.target.value)}
-                    placeholder="Seu nome completo"
+                    placeholder={t("placeholder-name")}
                     className="w-full px-4 py-3 bg-input border border-border rounded-xl text-foreground focus:border-primary focus:outline-none transition-colors"
                     required
                     data-testid="input-name"
@@ -182,14 +184,14 @@ export default function ContactSection() {
 
                 <div>
                   <Label htmlFor="email" className="block text-foreground font-medium mb-2">
-                    Email *
+                    {t("label-email")}
                   </Label>
                   <Input
                     id="email"
                     type="email"
                     value={formData.email}
                     onChange={(e) => handleInputChange("email", e.target.value)}
-                    placeholder="seu@email.com"
+                    placeholder={t("placeholder-email")}
                     className="w-full px-4 py-3 bg-input border border-border rounded-xl text-foreground focus:border-primary focus:outline-none transition-colors"
                     required
                     data-testid="input-email"
@@ -198,14 +200,14 @@ export default function ContactSection() {
 
                 <div>
                   <Label htmlFor="subject" className="block text-foreground font-medium mb-2">
-                    Assunto *
+                    {t("label-subject")}
                   </Label>
                   <Input
                     id="subject"
                     type="text"
                     value={formData.subject}
                     onChange={(e) => handleInputChange("subject", e.target.value)}
-                    placeholder="Sobre o que você gostaria de conversar?"
+                    placeholder={t("placeholder-subject")}
                     className="w-full px-4 py-3 bg-input border border-border rounded-xl text-foreground focus:border-primary focus:outline-none transition-colors"
                     required
                     data-testid="input-subject"
@@ -214,14 +216,14 @@ export default function ContactSection() {
 
                 <div>
                   <Label htmlFor="message" className="block text-foreground font-medium mb-2">
-                    Mensagem *
+                    {t("label-message")}
                   </Label>
                   <Textarea
                     id="message"
                     value={formData.message}
                     onChange={(e) => handleInputChange("message", e.target.value)}
                     rows={5}
-                    placeholder="Conte-me mais sobre seu projeto ou ideia..."
+                    placeholder={t("placeholder-message")}
                     className="w-full px-4 py-3 bg-input border border-border rounded-xl text-foreground focus:border-primary focus:outline-none transition-colors resize-none"
                     required
                     data-testid="input-message"
@@ -236,12 +238,12 @@ export default function ContactSection() {
                   {isLoading ? (
                     <>
                       <div className="mr-2 h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
-                      Enviando...
+                      {t("submit-sending")}
                     </>
                   ) : (
                     <>
                       <Send className="mr-2 h-4 w-4" />
-                      Enviar Mensagem
+                      {t("submit-send")}
                     </>
                   )}
                 </Button>

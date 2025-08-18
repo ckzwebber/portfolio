@@ -1,19 +1,22 @@
 import { useState, useEffect } from "react";
-import { Moon, Sun, Menu, X } from "lucide-react";
+import { Moon, Sun, Menu, X, Earth } from "lucide-react";
 import { useTheme } from "@/components/theme-provider";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 export default function Navigation() {
   const { theme, setTheme } = useTheme();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const { i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const navItems = [
-    { href: "#home", label: "Início" },
-    { href: "#about", label: "Sobre" },
-    { href: "#projects", label: "Projetos" },
-    { href: "#experience", label: "Experiência" },
-    { href: "#contact", label: "Contato" },
+    { href: "#home", label: t("start") },
+    { href: "#about", label: t("about") },
+    { href: "#projects", label: t("projects") },
+    { href: "#experience", label: t("experience") },
+    { href: "#contact", label: t("contact") },
   ];
 
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -69,6 +72,15 @@ export default function Navigation() {
               </a>
             ))}
 
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => i18n.changeLanguage(i18n.language === "en" ? "pt-BR" : "en")}
+              className="glass-light hover:bg-primary transition-colors duration-300"
+              data-testid="language-toggle">
+              {i18n.language === "en" ? "EN" : "BR"}
+            </Button>
+
             <Button variant="ghost" size="icon" onClick={() => setTheme(theme === "light" ? "dark" : "light")} className="glass-light hover:bg-primary transition-colors duration-300" data-testid="theme-toggle">
               {theme === "light" ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
             </Button>
@@ -87,16 +99,35 @@ export default function Navigation() {
                   {item.label}
                 </a>
               ))}
+
+              <Button
+                variant="ghost"
+                onClick={() => i18n.changeLanguage(i18n.language === "en" ? "pt-BR" : "en")}
+                className="justify-start p-0 h-auto font-normal text-text-lighter hover:text-white"
+                data-testid="mobile-language-toggle">
+                {i18n.language === "en" ? (
+                  <>
+                    <Earth className="h-4 w-4 mr-2" />
+                    EN
+                  </>
+                ) : (
+                  <>
+                    <Earth className="h-4 w-4 mr-2" />
+                    BR
+                  </>
+                )}
+              </Button>
+
               <Button variant="ghost" onClick={() => setTheme(theme === "light" ? "dark" : "light")} className="justify-start p-0 h-auto font-normal text-text-lighter hover:text-white" data-testid="mobile-theme-toggle">
                 {theme === "light" ? (
                   <>
                     <Moon className="h-4 w-4 mr-2" />
-                    Modo Escuro
+                    {t("dark-mode")}
                   </>
                 ) : (
                   <>
                     <Sun className="h-4 w-4 mr-2" />
-                    Modo Claro
+                    {t("light-mode")}
                   </>
                 )}
               </Button>

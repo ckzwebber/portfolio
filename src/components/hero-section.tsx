@@ -3,9 +3,11 @@ import { Button } from "@/components/ui/button";
 import { useTypingAnimation } from "@/hooks/use-typing-animation";
 import { personalInfo } from "@/lib/constants";
 import profileImage from "../assets/Perfil.jpg";
+import { useTranslation } from "react-i18next";
 
 export default function HeroSection() {
   const typingText = useTypingAnimation(["Backend Developer", "Full Stack Developer", "Node.js Specialist", "TypeScript Enthusiast", "Problem Solver"]);
+  const { t } = useTranslation();
 
   const handleSmoothScroll = (target: string) => {
     const element = document.querySelector(target);
@@ -23,7 +25,7 @@ export default function HeroSection() {
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold mb-6" data-testid="hero-title">
-            Olá, eu sou{" "}
+            {t("welcome")}{" "}
             <span className="gradient-text">
               {personalInfo.name.split(" ")[0]} {personalInfo.name.split(" ")[1]}
             </span>
@@ -34,8 +36,7 @@ export default function HeroSection() {
           </div>
 
           <p className="text-lg text-text-light mb-8 max-w-2xl mx-auto leading-relaxed" data-testid="hero-description">
-            Desenvolvedor Backend especializado em <strong className="text-primary">Node.js</strong>,<strong className="text-primary"> TypeScript</strong> e tecnologias modernas. Estudante de Ciência da Computação na
-            UNESC, apaixonado por criar soluções eficientes e escaláveis.
+            {t("hero-description")} <strong className="text-primary">Node.js</strong>,<strong className="text-primary"> TypeScript</strong> {t("hero-description-after")}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -44,7 +45,7 @@ export default function HeroSection() {
               className="inline-flex items-center px-8 py-3 bg-primary hover:bg-primary-dark text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 animate-glow"
               data-testid="view-projects-btn">
               <Code className="mr-2 h-4 w-4" />
-              Ver Projetos
+              {t("see-projects")}
             </Button>
             <Button
               variant="outline"
@@ -52,7 +53,7 @@ export default function HeroSection() {
               className="inline-flex items-center px-8 py-3 glass-light hover:bg-primary hover:text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105"
               data-testid="contact-btn">
               <Mail className="mr-2 h-4 w-4" />
-              Entre em Contato
+              {t("contact-me")}
             </Button>
           </div>
 

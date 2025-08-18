@@ -42,6 +42,7 @@ export const projects = [
   {
     title: "Game Tracker",
     description: "Aplicação para acompanhar jogos que eu joguei e estou jogando, incluindo avaliações e horas jogadas.",
+    descriptionEn: "Application to track games I've played and am currently playing, including reviews and playtime.",
     image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
     technologies: ["JavaScript", "HTML", "CSS"],
     techColors: ["bg-yellow-500/20 text-yellow-400", "bg-orange-500/20 text-orange-400", "bg-blue-500/20 text-blue-400"],
@@ -52,6 +53,7 @@ export const projects = [
   {
     title: "Day Tasks",
     description: "Micro-app em Node.js + TypeScript + PostgreSQL que envia e-mails diários com tarefas agendadas às 05:00.",
+    descriptionEn: "Micro-app in Node.js + TypeScript + PostgreSQL that sends daily emails with scheduled tasks at 05:00.",
     image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
     technologies: ["TypeScript", "Node.js", "PostgreSQL"],
     techColors: ["bg-blue-600/20 text-blue-400", "bg-green-500/20 text-green-400", "bg-blue-500/20 text-blue-400"],
@@ -62,6 +64,7 @@ export const projects = [
   {
     title: "Wallet Watch",
     description: "Acompanhe a variação de preços de diversas moedas em relação ao BRL em tempo real.",
+    descriptionEn: "Track the price variation of various currencies against the BRL in real-time.",
     image: "https://images.unsplash.com/photo-1640340434855-6084b1f4901c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
     technologies: ["TypeScript", "React", "API"],
     techColors: ["bg-blue-600/20 text-blue-400", "bg-cyan-500/20 text-cyan-400", "bg-green-500/20 text-green-400"],
@@ -72,6 +75,7 @@ export const projects = [
   {
     title: "UNESC FIPE Web Search",
     description: "Projeto web que permite consultar e exibir modelos de carros da Tabela FIPE.",
+    descriptionEn: "Web project that allows querying and displaying car models from the FIPE Table.",
     image: "https://images.unsplash.com/photo-1508974239320-0a029497e820?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     technologies: ["JavaScript", "HTML", "CSS", "API"],
     techColors: ["bg-yellow-500/20 text-yellow-400", "bg-orange-500/20 text-orange-400", "bg-blue-500/20 text-blue-400", "bg-green-500/20 text-green-400"],
@@ -82,6 +86,7 @@ export const projects = [
   {
     title: "LinkedIn Post Generator",
     description: "Gera e envia posts diários para LinkedIn sobre tecnologias modernas usando IA com API Ollama.",
+    descriptionEn: "Generates and sends daily LinkedIn posts about modern technologies using AI with the Ollama API.",
     image: "https://images.unsplash.com/photo-1611944212129-29977ae1398c?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     technologies: ["Python", "AI / ML", "API"],
     techColors: ["bg-blue-500/20 text-blue-400", "bg-purple-500/20 text-purple-400", "bg-green-500/20 text-green-400"],
@@ -92,6 +97,7 @@ export const projects = [
   {
     title: "CLI Word PDF Counter",
     description: "Ferramenta CLI em Rust para extrair texto e contar palavras mais frequentes em PDFs.",
+    descriptionEn: "CLI tool in Rust to extract text and count most frequent words in PDFs.",
     image: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
     technologies: ["Rust", "CLI", "PDF"],
     techColors: ["bg-orange-600/20 text-orange-400", "bg-gray-500/20 text-gray-400", "bg-red-500/20 text-red-400"],
@@ -102,6 +108,7 @@ export const projects = [
   {
     title: "Simples Nacional Status Checker",
     description: "Script em Python para extrair CNPJs e consultar automaticamente a situação no Simples Nacional via API.",
+    descriptionEn: "Python script to extract CNPJs and automatically check their status in the Simples Nacional via API.",
     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
     technologies: ["Python", "API", "Excel"],
     techColors: ["bg-blue-500/20 text-blue-400", "bg-green-500/20 text-green-400", "bg-green-600/20 text-green-500"],
@@ -112,6 +119,7 @@ export const projects = [
   {
     title: "UNESC Java Projects",
     description: "Coleção de pequenos projetos em Java desenvolvidos durante o curso de Ciência da Computação.",
+    descriptionEn: "Collection of small Java projects developed during the Computer Science course.",
     image: "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
     technologies: ["Java", "OOP", "Algorithms"],
     techColors: ["bg-red-500/20 text-red-400", "bg-purple-500/20 text-purple-400", "bg-blue-600/20 text-blue-400"],
@@ -122,6 +130,7 @@ export const projects = [
   {
     title: "UNESC Binary Search Pokédex",
     description: "Aplicativo Pokédex baseado em Electron que implementa busca binária para pesquisas rápidas de Pokémon.",
+    descriptionEn: "Pokédex application based on Electron that implements binary search for quick Pokémon searches.",
     image: "https://images.unsplash.com/photo-1613771404721-1f92d799e49f?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     technologies: ["JavaScript", "Electron", "API"],
     techColors: ["bg-yellow-500/20 text-yellow-400", "bg-blue-600/20 text-blue-400", "bg-green-500/20 text-green-400"],
@@ -134,57 +143,87 @@ export const projects = [
 export const experience = [
   {
     position: "Desenvolvedor Backend",
+    positionEn: "Backend Developer",
     company: "La Moda",
+    companyEn: "La Moda",
     period: "05/2025 - Presente",
+    periodEn: "05/2025 - Present",
     responsibilities: ["Desenvolvimento de integrações com JavaScript e TypeScript (Node.js)", "Foco em performance e otimização de sistemas", "Implementação de soluções escaláveis e eficientes"],
+    responsibilitiesEn: ["Development of integrations with JavaScript and TypeScript (Node.js)", "Focus on system performance and optimization", "Implementation of scalable and efficient solutions"],
   },
   {
     position: "Desenvolvedor Web FullStack",
+    positionEn: "FullStack Web Developer",
     company: "La Moda",
+    companyEn: "La Moda",
     period: "09/2024 - 05/2025",
+    periodEn: "09/2024 - 05/2025",
     responsibilities: ["Desenvolvimento e manutenção de aplicações web", "Stack: TypeScript, JavaScript, React, Node.js, AWS, SQL", "Colaboração em projetos de alta complexidade"],
+    responsibilitiesEn: ["Development and maintenance of web applications", "Stack: TypeScript, JavaScript, React, Node.js, AWS, SQL", "Collaboration on high complexity projects"],
   },
   {
     position: "Desenvolvedor de Software",
+    positionEn: "Software Developer",
     company: "Useall Software",
+    companyEn: "Useall Software",
     period: "08/2024 - 09/2024",
+    periodEn: "08/2024 - 09/2024",
     responsibilities: ["Desenvolvimento em Python e C#", "Implementação de soluções customizadas"],
+    responsibilitiesEn: ["Development using Python and C#", "Implementation of customized solutions"],
   },
   {
     position: "Técnico de TI",
+    positionEn: "IT Technician",
     company: "MDS Informática",
+    companyEn: "MDS Informática",
     period: "02/2023 - 02/2024",
+    periodEn: "02/2023 - 02/2024",
     responsibilities: ["Manutenção e configuração de sistemas", "Suporte a clientes corporativos", "Resolução de problemas técnicos complexos"],
+    responsibilitiesEn: ["Maintenance and configuration of systems", "Support for corporate clients", "Resolution of complex technical issues"],
   },
 ];
 
 export const education = {
   course: "Ciência da Computação",
+  courseEn: "Computer Science",
   institution: "UNESC - Universidade do Extremo Sul Catarinense",
+  institutionEn: "UNESC - University of the Extreme South of Santa Catarina",
   status: "Em andamento",
+  statusEn: "Ongoing",
   location: "Criciúma, SC",
+  locationEn: "Criciúma, SC",
 };
 
 export const achievements = [
   {
     title: "CS50 - Harvard University",
+    titleEn: "CS50 - Harvard University",
     description: "Curso de ciência da computação e programação",
+    descriptionEn: "Computer Science and Programming course",
   },
   {
     title: "3x Menções Honrosas - OBMEP",
+    titleEn: "3x Honourable Mentions - OBMEP",
     description: "Reconhecimento em Matemática",
+    descriptionEn: "3x Honourable Mentions - OBMEP (Mathematics Recognition)",
   },
   {
     title: "Curso.dev - Filipe Deschamps",
+    titleEn: "Curso.dev - Filipe Deschamps",
     description: "Formação completa em desenvolvimento web",
+    descriptionEn: "Complete training in web development",
   },
   {
     title: ".NET Developer - DIO",
+    titleEn: ".NET Developer - DIO",
     description: "Especialização em C# e .NET",
+    descriptionEn: "Specialization in C# and .NET",
   },
   {
     title: "DevTheDevs - PUCRS",
+    titleEn: "DevTheDevs - PUCRS",
     description: "Capacitação em desenvolvimento Java",
+    descriptionEn: "Training in Java development",
   },
 ];
 
