@@ -58,14 +58,14 @@ export default function AboutSection() {
 
               <div className="mb-6">
                 <div className="flex items-center mb-4">
-                  <div className="w-3 h-3 bg-cyan-500 rounded-full mr-3"></div>
-                  <h4 className="text-lg font-semibold text-foreground" data-testid="frontend-title">
-                    Frontend
+                  <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                  <h4 className="text-lg font-semibold text-foreground" data-testid="backend-title">
+                    Backend
                   </h4>
                 </div>
                 <div className="flex flex-wrap gap-3">
-                  {techStack.frontend.map((tech, index) => (
-                    <div key={tech.name} className="tech-icon flex items-center space-x-2 p-3 glass-light rounded-lg hover:scale-105 transition-transform duration-200" data-testid={`frontend-tech-${index}`}>
+                  {techStack.backend.map((tech, index) => (
+                    <div key={tech.name} className="tech-icon flex items-center space-x-2 p-3 glass-light rounded-lg hover:scale-105 transition-transform duration-200" data-testid={`backend-tech-${index}`}>
                       <div className={`text-2xl ${tech.color}`} dangerouslySetInnerHTML={{ __html: tech.icon }} />
                       <span className="text-sm font-medium text-foreground">{tech.name}</span>
                     </div>
@@ -75,14 +75,14 @@ export default function AboutSection() {
 
               <div className="mb-6">
                 <div className="flex items-center mb-4">
-                  <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                  <h4 className="text-lg font-semibold text-foreground" data-testid="backend-title">
-                    Backend
+                  <div className="w-3 h-3 bg-cyan-500 rounded-full mr-3"></div>
+                  <h4 className="text-lg font-semibold text-foreground" data-testid="frontend-title">
+                    Frontend
                   </h4>
                 </div>
                 <div className="flex flex-wrap gap-3">
-                  {techStack.backend.map((tech, index) => (
-                    <div key={tech.name} className="tech-icon flex items-center space-x-2 p-3 glass-light rounded-lg hover:scale-105 transition-transform duration-200" data-testid={`backend-tech-${index}`}>
+                  {techStack.frontend.map((tech, index) => (
+                    <div key={tech.name} className="tech-icon flex items-center space-x-2 p-3 glass-light rounded-lg hover:scale-105 transition-transform duration-200" data-testid={`frontend-tech-${index}`}>
                       <div className={`text-2xl ${tech.color}`} dangerouslySetInnerHTML={{ __html: tech.icon }} />
                       <span className="text-sm font-medium text-foreground">{tech.name}</span>
                     </div>

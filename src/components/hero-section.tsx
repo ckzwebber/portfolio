@@ -6,7 +6,7 @@ import profileImage from "../assets/Perfil.jpg";
 import { useTranslation } from "react-i18next";
 
 export default function HeroSection() {
-  const typingText = useTypingAnimation(["Backend Developer", "Full Stack Developer", "Node.js Specialist", "TypeScript Enthusiast", "Problem Solver"]);
+  const typingText = useTypingAnimation(["Backend Developer", "Node.js & NestJS Specialist", "TypeScript Enthusiast", "CS Student at UNESC"]);
   const { t } = useTranslation();
 
   const handleSmoothScroll = (target: string) => {
