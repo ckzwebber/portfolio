@@ -1,7 +1,7 @@
 {
     "welcome": "Olá, eu sou",
     "hero-description": "Desenvolvedor Backend especializado em",
-    "hero-description-after": "e tecnologias modernas. Atuo na La Moda desenvolvendo integrações e APIs RESTful. Estudante de Ciência da Computação na UNESC em Criciúma, SC, Brasil. Carlos Miguel desenvolvedor backend com foco em APIs e integrações.",
+    "hero-description-after": "e tecnologias modernas. Atuo na La Moda desenvolvendo integrações e APIs RESTful. Estudante de Ciência da Computação na UNESC.",
     "see-projects": "Ver Projetos",
     "contact-me": "Entre em Contato",
     "start": "Início",
@@ -20,7 +20,7 @@
     "animation-mode-off": "OFF",
     "animation-mode-balanced": "BALANCED",
     "animation-mode-full": "FULL",
-    "about-description": "Desenvolvedor Backend com foco em arquitetura de APIs, integrações e boas práticas de desenvolvimento. Você me encontra como @cakowebber e ckzwebber GitHub. Desenvolvedor backend Criciúma e desenvolvedor backend Brasil.",
+    "about-description": "Desenvolvedor Backend com foco em arquitetura de APIs, integrações e boas práticas de desenvolvimento.",
     "about-subtitle": "Desenvolvedor Backend com foco em arquitetura de APIs, integrações e boas práticas de desenvolvimento.",
     "my-journey": "Minha Jornada",
     "journey-title": "Minha Jornada",
