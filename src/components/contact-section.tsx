@@ -106,7 +106,7 @@ export default function ContactSection() {
 
   return (
     <section id="contact" className="section-shell">
-      <div className="container mx-auto max-w-6xl">
+      <div className="container mx-auto max-w-7xl">
         <SectionHeading number="04" title={<Trans i18nKey="contact-title" components={[<span className="gradient-text" />]} />} subtitle={t("contact-subtitle")} />
 
         <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-8 lg:gap-12">
