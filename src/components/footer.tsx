@@ -6,32 +6,40 @@ export default function Footer() {
   const { t } = useTranslation();
 
   return (
-    <footer className="py-12 px-6 border-t border-dark-border">
+    <footer className="py-12 md:py-14 px-4 md:px-8 border-t border-dark-border relative z-10">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center">
-          <div className="flex items-center justify-center space-x-2 mb-6">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">{t("footer-initials")}</span>
+        <div className="grid md:grid-cols-[1fr_auto] gap-8 items-end">
+          <div>
+            <div className="flex items-center space-x-3 mb-5">
+              <div className="w-10 h-10 border border-primary bg-primary/20 flex items-center justify-center">
+                <span className="text-white font-bold text-sm font-mono">{t("footer-initials")}</span>
+              </div>
+              <span className="text-2xl font-display uppercase tracking-tight" data-testid="footer-name">
+                {t("footer-name")}
+              </span>
             </div>
-            <span className="text-xl font-bold" data-testid="footer-name">
-              {t("footer-name")}
-            </span>
+
+            <p className="text-text-light mb-6 max-w-2xl text-balance" data-testid="footer-description">
+              {t("footer-description")}
+            </p>
+
+            <div className="text-text-light text-sm space-y-2">
+              <p data-testid="footer-copyright">{t("footer-copyright")}</p>
+              <p data-testid="footer-made-with">{t("footer-made-with")}</p>
+            </div>
           </div>
 
-          <p className="text-text-light mb-6 max-w-2xl mx-auto" data-testid="footer-description">
-            {t("footer-description")}
-          </p>
-
-          <div className="flex justify-center space-x-6 mb-8">
+          <div className="flex md:justify-end space-x-4 md:space-x-6">
             <a
               href={personalInfo.github}
               target="_blank"
               rel="noopener noreferrer"
               title={t("footer-github-label")}
               aria-label={t("footer-github-label")}
-              className="text-2xl text-text-light hover:text-primary transition-all duration-300 transform hover:scale-110"
+              data-magnetic="true"
+              className="w-11 h-11 border border-border bg-secondary flex items-center justify-center text-text-light hover:text-primary hover:border-primary/70 transition-colors"
               data-testid="footer-github">
-              <Github className="h-6 w-6" />
+              <Github className="h-5 w-5" />
             </a>
             <a
               href={personalInfo.linkedin}
@@ -39,9 +47,10 @@ export default function Footer() {
               rel="noopener noreferrer"
               title={t("footer-linkedin-label")}
               aria-label={t("footer-linkedin-label")}
-              className="text-2xl text-text-light hover:text-primary transition-all duration-300 transform hover:scale-110"
+              data-magnetic="true"
+              className="w-11 h-11 border border-border bg-secondary flex items-center justify-center text-text-light hover:text-primary hover:border-primary/70 transition-colors"
               data-testid="footer-linkedin">
-              <Linkedin className="h-6 w-6" />
+              <Linkedin className="h-5 w-5" />
             </a>
             <a
               href={personalInfo.portfolio}
@@ -49,17 +58,11 @@ export default function Footer() {
               rel="noopener noreferrer"
               title={t("footer-portfolio-label")}
               aria-label={t("footer-portfolio-label")}
-              className="text-2xl text-text-light hover:text-primary transition-all duration-300 transform hover:scale-110"
+              data-magnetic="true"
+              className="w-11 h-11 border border-border bg-secondary flex items-center justify-center text-text-light hover:text-primary hover:border-primary/70 transition-colors"
               data-testid="footer-portfolio">
-              <Globe className="h-6 w-6" />
+              <Globe className="h-5 w-5" />
             </a>
-          </div>
-
-          <div className="text-text-light text-sm">
-            <p data-testid="footer-copyright">{t("footer-copyright")}</p>
-            <p className="mt-2" data-testid="footer-made-with">
-              {t("footer-made-with")}
-            </p>
           </div>
         </div>
       </div>

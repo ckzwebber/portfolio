@@ -4,7 +4,11 @@ import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
 export default defineConfig({
-  plugins: [react(), runtimeErrorOverlay(), ...(process.env.NODE_ENV !== "production" && process.env.REPL_ID !== undefined ? [await import("@replit/vite-plugin-cartographer").then((m) => m.cartographer())] : [])],
+  plugins: [
+    react(),
+    ...(process.env.NODE_ENV !== "production" ? [runtimeErrorOverlay()] : []),
+    ...(process.env.NODE_ENV !== "production" && process.env.REPL_ID !== undefined ? [await import("@replit/vite-plugin-cartographer").then((m) => m.cartographer())] : []),
+  ],
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "src"),
@@ -14,6 +18,16 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist"),
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          "vendor-react": ["react", "react-dom", "wouter", "next-themes"],
+          "vendor-motion": ["framer-motion", "lenis"],
+          "vendor-i18n": ["i18next", "react-i18next", "i18next-browser-languagedetector"],
+          "vendor-ui": ["lucide-react", "class-variance-authority", "clsx", "tailwind-merge"],
+        },
+      },
+    },
   },
   server: {
     fs: {

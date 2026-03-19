@@ -6,26 +6,38 @@ import ProjectsSection from "@/components/projects-section";
 import ExperienceSection from "@/components/experience-section";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
+import CustomCursor from "@/components/custom-cursor";
+import { useAnimationMode } from "@/components/animation-mode-provider";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
+import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 
 export default function Portfolio() {
+  const { mode } = useAnimationMode();
+
   useScrollReveal();
+  useSmoothScroll();
 
   useEffect(() => {
     document.title = "Carlos Miguel Webber | Backend Developer";
-    document.head.querySelector('meta[name="description"]')?.setAttribute("content", 
-      "Portfolio de Carlos Miguel Webber Model - Desenvolvedor Backend especializado em Node.js, TypeScript, React e tecnologias modernas."
-    );
+    document.head.querySelector('meta[name="description"]')?.setAttribute("content", "Portfolio de Carlos Miguel Webber Model - Desenvolvedor Backend especializado em Node.js, TypeScript, React e tecnologias modernas.");
   }, []);
 
   return (
-    <div className="bg-background dark:bg-dark-bg text-foreground font-sans overflow-x-hidden">
-      {/* Floating Background Shapes */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        <div className="floating-shape w-64 h-64 -top-32 -left-32" style={{ animationDelay: '0s' }}></div>
-        <div className="floating-shape w-48 h-48 top-1/4 -right-24" style={{ animationDelay: '2s' }}></div>
-        <div className="floating-shape w-32 h-32 bottom-1/4 left-1/4" style={{ animationDelay: '4s' }}></div>
-        <div className="floating-shape w-56 h-56 -bottom-28 -right-28" style={{ animationDelay: '6s' }}></div>
+    <div className="bg-background dark:bg-dark-bg text-foreground font-sans overflow-x-hidden relative">
+      {mode === "full" && <CustomCursor />}
+
+      <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
+        <div className="ambient-grid" />
+        <div className="ambient-noise" />
+        <div className="floating-shape w-80 h-80 -top-40 -left-40" style={{ animationDelay: "0s" }} />
+        <div className="floating-shape w-56 h-56 top-[20%] -right-20" style={{ animationDelay: "2.4s" }} />
+        <div className="floating-shape w-40 h-40 bottom-[22%] left-[16%]" style={{ animationDelay: "3.2s" }} />
+        <div className="floating-shape w-64 h-64 -bottom-36 right-[6%]" style={{ animationDelay: "4.6s" }} />
+        <div className="ambient-orb ambient-orb--one" />
+        <div className="ambient-orb ambient-orb--two" />
+        <div className="ambient-beam" />
+        <div className="absolute inset-y-0 left-[14%] w-px bg-white/10" />
+        <div className="absolute inset-y-0 right-[8%] w-px bg-white/10" />
       </div>
 
       <Navigation />
