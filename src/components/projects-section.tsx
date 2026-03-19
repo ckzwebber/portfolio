@@ -133,7 +133,7 @@ export default function ProjectsSection() {
                 className="panel reveal h-full flex flex-col"
                 data-reveal="zoom">
                 <div className="relative overflow-hidden border border-border mb-5">
-                  <img src={activeProject.image} alt={activeProject.title} className="w-full h-[260px] md:h-[340px] object-cover" data-testid={`project-image-${activeIndex}`} />
+                  <img src={activeProject.image} alt={t("project-image-alt", { title: activeProject.title })} className="w-full h-[260px] md:h-[340px] object-cover" data-testid={`project-image-${activeIndex}`} />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                   <div className="absolute left-4 top-4 font-mono text-xs tracking-[0.14em] uppercase text-white/80">{activeFilter}</div>
                 </div>

@@ -1,7 +1,7 @@
 {
     "welcome": "Hello, I am",
     "hero-description": "Backend Developer specialized in",
-    "hero-description-after": "and modern technologies. Currently working at La Moda building integrations and RESTful APIs. Computer Science student at UNESC.",
+    "hero-description-after": "and modern technologies. Currently working at La Moda building integrations and RESTful APIs. Computer Science student at UNESC in Criciuma, SC, Brazil. Backend Developer Node.js NestJS TypeScript.",
     "see-projects": "See Projects",
     "contact-me": "Contact Me",
     "start": "Home",
@@ -20,7 +20,7 @@
     "animation-mode-off": "OFF",
     "animation-mode-balanced": "BALANCED",
     "animation-mode-full": "FULL",
-    "about-description": "Backend Developer focused on API architecture, system integrations and software best practices.",
+    "about-description": "Backend Developer focused on API architecture, system integrations and software best practices. You can find me as @cakowebber and ckzwebber GitHub.",
     "my-journey": "My Journey",
     "journey-title": "My Journey",
     "journey-item-1": "<0>Backend Developer at La Moda</0>, working with integrations and RESTful APIs using Node.js and NestJS.",

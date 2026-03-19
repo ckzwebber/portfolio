@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Navigation from "@/components/navigation";
 import HeroSection from "@/components/hero-section";
 import AboutSection from "@/components/about-section";
@@ -16,11 +15,6 @@ export default function Portfolio() {
 
   useScrollReveal();
   useSmoothScroll();
-
-  useEffect(() => {
-    document.title = "Carlos Miguel Webber | Backend Developer";
-    document.head.querySelector('meta[name="description"]')?.setAttribute("content", "Portfolio de Carlos Miguel Webber Model - Desenvolvedor Backend especializado em Node.js, TypeScript, React e tecnologias modernas.");
-  }, []);
 
   return (
     <div className="bg-background dark:bg-dark-bg text-foreground font-sans overflow-x-hidden relative">

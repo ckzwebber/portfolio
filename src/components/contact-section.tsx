@@ -131,7 +131,7 @@ export default function ContactSection() {
                     <a
                       href={info.href}
                       target={info.href.startsWith("http") ? "_blank" : undefined}
-                      rel={info.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                      rel={info.href.startsWith("http") ? (info.label === "GitHub" || info.label === "LinkedIn" ? "me noopener noreferrer" : "noopener noreferrer") : undefined}
                       className="text-text-light hover:text-primary transition-colors"
                       data-testid={`contact-info-link-${index}`}>
                       {info.value}

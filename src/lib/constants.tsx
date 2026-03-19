@@ -5,7 +5,7 @@ export const personalInfo = {
   title: "Backend Developer",
   location: "Criciúma - SC - Brasil 🇧🇷",
   education: "Ciência da Computação - UNESC (em andamento)",
-  linkedin: "https://www.linkedin.com/in/cmiguelwm/",
+  linkedin: "https://www.linkedin.com/in/cakowebber/",
   github: "https://github.com/ckzwebber",
   portfolio: "https://webberportfolio.netlify.app/",
   email: "kacowebber11@unesc.net",
@@ -220,9 +220,9 @@ export const contactInfo = [
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/cmiguelwm",
-    copyValue: "https://www.linkedin.com/in/cmiguelwm/",
-    href: "https://www.linkedin.com/in/cmiguelwm/",
+    value: "linkedin.com/in/cakowebber",
+    copyValue: "https://www.linkedin.com/in/cakowebber/",
+    href: "https://www.linkedin.com/in/cakowebber/",
     icon: <Linkedin className="text-primary text-xl" />,
   },
   {

@@ -33,7 +33,7 @@ export default function Footer() {
             <a
               href={personalInfo.github}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="me noopener noreferrer"
               title={t("footer-github-label")}
               aria-label={t("footer-github-label")}
               data-magnetic="true"
@@ -44,7 +44,7 @@ export default function Footer() {
             <a
               href={personalInfo.linkedin}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="me noopener noreferrer"
               title={t("footer-linkedin-label")}
               aria-label={t("footer-linkedin-label")}
               data-magnetic="true"
