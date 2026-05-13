@@ -1,4 +1,8 @@
 import { Mail, Github, Linkedin, Globe } from "lucide-react";
+import ArenaImg from "../assets/arena.png";
+import LamborghiniImg from "../assets/lamborghini.png";
+import CSImg from "../assets/cs.png";
+import GameTrackerImg from "../assets/gametracker.png";
 
 export const personalInfo = {
   name: "Carlos Miguel Webber Model",
@@ -40,10 +44,95 @@ export const techStack = {
 
 export const projects = [
   {
+    title: "CS 1v1",
+    description:
+      "FPS multiplayer 1v1 no browser inspirado no CS2. Servidor autoritativo com validação de tiros via ray-AABB, client-side prediction, server reconciliation e entity interpolation. Renderização 3D com Three.js, sons procedurais via Web Audio API, sistema de rounds MR12 completo. Zero frameworks, zero assets externos.",
+    descriptionEn:
+      "Browser-based 1v1 multiplayer FPS inspired by CS2. Authoritative server with ray-AABB hit validation, client-side prediction, server reconciliation and entity interpolation. 3D rendering with Three.js, procedural audio via Web Audio API, full MR12 round system. No frameworks, no external assets.",
+    image: CSImg,
+    technologies: ["Three.js", "Socket.IO", "Node.js", "JavaScript"],
+    techColors: ["bg-gray-500/20 text-gray-300", "bg-gray-500/20 text-gray-300", "bg-green-500/20 text-green-400", "bg-yellow-500/20 text-yellow-400"],
+    github: "https://github.com/ckzwebber/cs",
+    demo: null,
+    category: "fullstack",
+  },
+  {
+    title: "Arena",
+    description:
+      "Jogo multiplayer top-down PvP em tempo real. Cliente renderizado em Canvas 2D com prediction e reconciliação de estado. Servidor autoritativo em NestJS com game loop a 60fps, broadcast via Socket.IO e sistema de kill/death/respawn.",
+    descriptionEn:
+      "Real-time top-down PvP multiplayer game. Canvas 2D client with state prediction and reconciliation. Authoritative NestJS server running a 60fps game loop, Socket.IO broadcast and kill/death/respawn system.",
+    image: ArenaImg,
+    technologies: ["React", "TypeScript", "NestJS", "Socket.IO", "Canvas"],
+    techColors: ["bg-cyan-500/20 text-cyan-400", "bg-blue-600/20 text-blue-400", "bg-red-600/20 text-red-400", "bg-gray-500/20 text-gray-300", "bg-purple-500/20 text-purple-400"],
+    github: "https://github.com/ckzwebber/websocket-game-front",
+    demo: "https://websocket-game-front.vercel.app/",
+    category: "fullstack",
+  },
+  {
+    title: "GameTracker",
+    description: "Catálogo pessoal de jogos com design cinematic dark, motion com Framer Motion e imagens servidas direto da Steam CDN via appid. Dados em JSON tipado, filtros por status e ordenação por nota/horas.",
+    descriptionEn: "Personal game catalog with cinematic dark design, Framer Motion animations and images served directly from Steam CDN via appid. Typed JSON data source, status filters and rating/hours sorting.",
+    image: GameTrackerImg,
+    technologies: ["React", "TypeScript", "Tailwind", "Framer Motion"],
+    techColors: ["bg-cyan-500/20 text-cyan-400", "bg-blue-600/20 text-blue-400", "bg-teal-500/20 text-teal-400", "bg-pink-500/20 text-pink-400"],
+    github: "https://github.com/ckzwebber/game-tracker",
+    demo: "https://webbergametracker.netlify.app/",
+    category: "frontend",
+  },
+  {
+    title: "Day Tasks",
+    description:
+      "Micro-app que consulta tarefas no PostgreSQL e dispara e-mail diário às 05:00 via cron job. Template HTML com Handlebars, logging estruturado com Pino e stack de observabilidade Loki + Grafana via Docker Compose.",
+    descriptionEn:
+      "Micro-app that queries tasks from PostgreSQL and sends a daily email at 05:00 via cron job. HTML template with Handlebars, structured logging with Pino and Loki + Grafana observability stack via Docker Compose.",
+    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?q=80&w=2340&auto=format&fit=crop",
+    technologies: ["TypeScript", "Node.js", "PostgreSQL", "Docker"],
+    techColors: ["bg-blue-600/20 text-blue-400", "bg-green-500/20 text-green-400", "bg-blue-500/20 text-blue-400", "bg-blue-400/20 text-blue-300"],
+    github: "https://github.com/ckzwebber/day-tasks",
+    demo: null,
+    category: "backend",
+  },
+  {
+    title: "Factorio Auto Sort",
+    description:
+      "Mod para Factorio em Lua que adiciona botão de ordenação automática ao abrir baús. Usa a API de eventos do jogo (on_gui_opened, on_gui_click, on_gui_closed) para gerenciar o ciclo de vida do botão e reordenar inventário.",
+    descriptionEn:
+      "Factorio mod written in Lua that adds an auto-sort button when opening chests. Uses the game's event API (on_gui_opened, on_gui_click, on_gui_closed) to manage button lifecycle and reorder inventory.",
+    image: "https://i.ytimg.com/vi/BqaAjgpsoW8/maxresdefault.jpg",
+    technologies: ["Lua", "Factorio API"],
+    techColors: ["bg-blue-700/20 text-blue-300", "bg-yellow-600/20 text-yellow-400"],
+    github: "https://github.com/ckzwebber/factorio-auto-sort-chest-mod",
+    demo: null,
+    category: "tools",
+  },
+  {
+    title: "Lamborghini Project",
+    description: "Site não-oficial da Lamborghini com páginas de modelos, informações da marca e contato. Projeto de estudo com foco em componentização React e design responsivo.",
+    descriptionEn: "Unofficial Lamborghini website with model pages, brand info and contact. Study project focused on React componentization and responsive design.",
+    image: LamborghiniImg,
+    technologies: ["React", "JavaScript", "CSS"],
+    techColors: ["bg-cyan-500/20 text-cyan-400", "bg-yellow-500/20 text-yellow-400", "bg-blue-500/20 text-blue-400"],
+    github: "https://github.com/ckzwebber/lamborghini-project",
+    demo: "https://webberlamborghini.netlify.app/",
+    category: "frontend",
+  },
+  {
+    title: "CLI Word PDF Counter",
+    description: "Ferramenta CLI em Rust para extração de texto e contagem de palavras frequentes em PDFs, com suporte a múltiplos arquivos e saída formatada no terminal.",
+    descriptionEn: "CLI tool built in Rust for text extraction and word frequency counting across PDF files, with multi-file support and formatted terminal output.",
+    image: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?q=80&w=2340&auto=format&fit=crop",
+    technologies: ["Rust", "CLI"],
+    techColors: ["bg-orange-600/20 text-orange-400", "bg-gray-500/20 text-gray-400"],
+    github: "https://github.com/ckzwebber/cli-word-pdf-counter",
+    demo: null,
+    category: "tools",
+  },
+  {
     title: "VTEX Gift Generator",
     description: "CLI interativo em TypeScript para operações de gift card na plataforma VTEX, consulta clientes por pedido, e-mail ou CPF/CNPJ e cria/credita gift cards em um único fluxo.",
     descriptionEn: "Interactive CLI in TypeScript for VTEX gift card operations, look up customers by order, email or CPF/CNPJ, then create and credit gift cards in a single flow.",
-    image: "https://images.unsplash.com/photo-1608755728617-aefab37d2edd?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "https://images.unsplash.com/photo-1608755728617-aefab37d2edd?q=80&w=2340&auto=format&fit=crop",
     technologies: ["TypeScript", "Node.js", "REST API"],
     techColors: ["bg-blue-600/20 text-blue-400", "bg-green-500/20 text-green-400", "bg-purple-500/20 text-purple-400"],
     github: "https://github.com/ckzwebber/vtex-gift-generator",
@@ -52,25 +141,14 @@ export const projects = [
   },
   {
     title: "VTEX Environment Migrator",
-    description: "CLI robusto em TypeScript para migração de componentes de catálogo VTEX entre ambientes, com interface moderna e interativa.",
-    descriptionEn: "Robust TypeScript CLI for migrating VTEX catalog components between environments, featuring a modern interactive interface.",
-    image: "https://images.unsplash.com/photo-1615525137689-198778541af6?q=80&w=2532&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "CLI em TypeScript para migração de componentes de catálogo VTEX entre ambientes, com interface interativa e validação de dados.",
+    descriptionEn: "TypeScript CLI for migrating VTEX catalog components between environments, with interactive interface and data validation.",
+    image: "https://images.unsplash.com/photo-1615525137689-198778541af6?q=80&w=2340&auto=format&fit=crop",
     technologies: ["TypeScript", "Node.js", "CLI"],
     techColors: ["bg-blue-600/20 text-blue-400", "bg-green-500/20 text-green-400", "bg-gray-500/20 text-gray-400"],
     github: "https://github.com/ckzwebber/vtex-environment-migrator",
     demo: null,
     category: "tools",
-  },
-  {
-    title: "Day Tasks",
-    description: "Micro-app em Node.js e TypeScript que busca tarefas agendadas no PostgreSQL e dispara e-mails automaticamente às 05:00 via cron job. Integração com Nodemailer e agendamento com node-cron.",
-    descriptionEn: "Node.js and TypeScript micro-app that queries scheduled tasks from PostgreSQL and automatically sends emails at 05:00 via cron job. Integrated with Nodemailer and node-cron.",
-    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
-    technologies: ["TypeScript", "Node.js", "PostgreSQL"],
-    techColors: ["bg-blue-600/20 text-blue-400", "bg-green-500/20 text-green-400", "bg-blue-500/20 text-blue-400"],
-    github: "https://github.com/ckzwebber/day-tasks",
-    demo: null,
-    category: "backend",
   },
   {
     title: "Wallet Watch",
@@ -82,17 +160,6 @@ export const projects = [
     github: "https://github.com/ckzwebber/wallet-watch",
     demo: null,
     category: "fullstack",
-  },
-  {
-    title: "CLI Word PDF Counter",
-    description: "Ferramenta CLI em Rust para extração de texto e contagem das palavras mais frequentes em arquivos PDF, com suporte a múltiplos arquivos e saída formatada no terminal.",
-    descriptionEn: "CLI tool built in Rust for text extraction and most frequent word counting across PDF files, with multi-file support and formatted terminal output.",
-    image: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
-    technologies: ["Rust", "CLI", "PDF"],
-    techColors: ["bg-orange-600/20 text-orange-400", "bg-gray-500/20 text-gray-400", "bg-red-500/20 text-red-400"],
-    github: "https://github.com/ckzwebber/cli-word-pdf-counter",
-    demo: null,
-    category: "tools",
   },
   {
     title: "Simples Nacional Status Checker",
@@ -220,9 +287,9 @@ export const contactInfo = [
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/cakowebber",
-    copyValue: "https://www.linkedin.com/in/cakowebber/",
-    href: "https://www.linkedin.com/in/cakowebber/",
+    value: "linkedin.com/in/cmiguelwm",
+    copyValue: "https://www.linkedin.com/in/cmiguelwm/",
+    href: "https://www.linkedin.com/in/cmiguelwm/",
     icon: <Linkedin className="text-primary text-xl" />,
   },
   {
