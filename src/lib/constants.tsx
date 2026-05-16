@@ -3,6 +3,7 @@ import ArenaImg from "../assets/arena.png";
 import LamborghiniImg from "../assets/lamborghini.png";
 import CSImg from "../assets/cs.png";
 import GameTrackerImg from "../assets/gametracker.png";
+import CentralComprasImg from "../assets/centralcompras.png";
 
 export const personalInfo = {
   name: "Carlos Miguel Webber Model",
@@ -43,6 +44,19 @@ export const techStack = {
 };
 
 export const projects = [
+  {
+    title: "Central de Compras",
+    description:
+      "Plataforma B2B fullstack conectando lojas e fornecedores, com catálogo, pedidos, campanhas e três perfis de acesso (admin, fornecedor, loja). Auth via cookie HttpOnly + JWT sem token no localStorage, seed idempotente para manter a demo estável, proxy de API no Next.js para resolver cookie cross-site entre Vercel e Koyeb, e viewer de logs com buffer em memória e auto-refresh.",
+    descriptionEn:
+      "Fullstack B2B platform connecting stores and suppliers, with catalog, orders, campaigns and three access profiles (admin, supplier, store). Auth via HttpOnly cookie + JWT with no token in localStorage, idempotent seed for stable demo, Next.js API proxy to solve cross-site cookies between Vercel and Koyeb, and a custom log viewer with in-memory buffer and auto-refresh.",
+    image: CentralComprasImg,
+    technologies: ["Next.js", "Express", "TypeScript", "PostgreSQL", "Tailwind"],
+    techColors: ["bg-gray-500/20 text-gray-300", "bg-red-600/20 text-red-400", "bg-blue-600/20 text-blue-400", "bg-blue-500/20 text-blue-400", "bg-teal-500/20 text-teal-400"],
+    github: "https://github.com/ckzwebber/unesc-projeto-central-compras-frontend",
+    demo: "https://central-compras.vercel.app",
+    category: "fullstack",
+  },
   {
     title: "CS 1v1",
     description:
@@ -183,14 +197,16 @@ export const experience = [
     period: "05/2025 - Presente",
     periodEn: "05/2025 - Present",
     responsibilities: [
-      "Desenvolvimento de integrações em Node.js e NestJS, reduzindo em até 25% o tempo de resposta de APIs internas.",
-      "Integração com MySQL e PostgreSQL garantindo confiabilidade no fluxo de dados entre sistemas legados e novos módulos.",
-      "Boas práticas: Git, Scrum/Kanban.",
+      "Atuação no HUB, plataforma interna de integrações que conecta ERP SAP a múltiplos marketplaces (Mercado Livre, Dafiti, Netshoes, Privalia), participando do system design e da arquitetura em AWS/EKS.",
+      "Implementação de módulos de pedido e produto em NestJS/TypeScript, com RabbitMQ (topic exchange, retry e DLQ) para mensageria assíncrona e KEDA para autoscaling baseado em profundidade de fila.",
+      "Desenvolvimento de pipeline de integração de imagens de produtos com foco em alto volume, otimização de complexidade algorítmica e processamento em lote.",
+      "Depuração de fluxos críticos de pedido entre plataformas, incluindo resolução de desincronizações entre SAP e marketplaces e correção de filtragem indevida de cashback em pedidos de marketplace.",
     ],
     responsibilitiesEn: [
-      "Built integrations in Node.js and NestJS, reducing internal API response time by up to 25%.",
-      "Integrated MySQL and PostgreSQL ensuring reliable data flow between legacy systems and new modules.",
-      "Best practices: Git, Scrum/Kanban.",
+      "Core contributor to HUB, an internal integration platform connecting SAP ERP to multiple marketplaces (Mercado Livre, Dafiti, Netshoes, Privalia), participating in system design and AWS/EKS architecture.",
+      "Built order and product modules in NestJS/TypeScript, with RabbitMQ (topic exchange, retry and DLQ) for async messaging and KEDA for queue-depth-based autoscaling.",
+      "Developed a product image integration pipeline focused on high volume, algorithmic complexity optimization and batch processing.",
+      "Debugged critical order flows across platforms, including SAP-marketplace desynchronization and incorrect cashback filtering on marketplace orders.",
     ],
   },
   {
@@ -201,14 +217,12 @@ export const experience = [
     period: "09/2024 - 05/2025",
     periodEn: "09/2024 - 05/2025",
     responsibilities: [
-      "Interfaces em React.js integradas a APIs RESTful com melhoria de até 20% na velocidade de carregamento.",
-      "Backend em Node.js/Express com autenticação e operações CRUD.",
-      "Entregas dentro do prazo em 95% dos casos atuando em times ágeis.",
+      "Desenvolvimento individual de ponta a ponta de uma plataforma interna de avaliação de peças de roupa: frontend em React, backend em Node.js/Express com autenticação própria e banco MariaDB.",
+      "Implementação de serviços de CRUD, controle de acesso e upload de imagens com AWS S3, em time ágil com ciclos de sprint quinzenais.",
     ],
     responsibilitiesEn: [
-      "Built React.js interfaces connected to RESTful APIs, improving page load speed by up to 20%.",
-      "Backend services in Node.js/Express including authentication and CRUD operations.",
-      "Delivered on time in 95% of sprints working in agile teams.",
+      "Solo end-to-end development of an internal clothing evaluation platform: React frontend, Node.js/Express backend with custom auth and MariaDB database.",
+      "Built CRUD services, access control and image upload with AWS S3, working in an agile team with biweekly sprints.",
     ],
   },
   {
@@ -218,8 +232,8 @@ export const experience = [
     companyEn: "Useall Software",
     period: "08/2024 - 09/2024",
     periodEn: "08/2024 - 09/2024",
-    responsibilities: ["Desenvolvimento em Python e C#", "Implementação de soluções customizadas"],
-    responsibilitiesEn: ["Development using Python and C#", "Implementation of customized solutions"],
+    responsibilities: ["Desenvolvimento em C# e Python, implementando scripts de automação de processos administrativos internos."],
+    responsibilitiesEn: ["Development in C# and Python, implementing automation scripts for internal administrative processes."],
   },
   {
     position: "Técnico de TI",
@@ -228,8 +242,8 @@ export const experience = [
     companyEn: "MDS Informática",
     period: "02/2023 - 02/2024",
     periodEn: "02/2023 - 02/2024",
-    responsibilities: ["Manutenção e configuração de sistemas", "Suporte a clientes corporativos", "Resolução de problemas técnicos complexos"],
-    responsibilitiesEn: ["Maintenance and configuration of systems", "Support for corporate clients", "Resolution of complex technical issues"],
+    responsibilities: ["Manutenção e configuração de sistemas, suporte a clientes corporativos e resolução de problemas técnicos."],
+    responsibilitiesEn: ["System maintenance and configuration, corporate client support and technical troubleshooting."],
   },
 ];
 
