@@ -58,16 +58,29 @@ export const projects = [
     category: "fullstack",
   },
   {
-    title: "CS 1v1",
+    title: "Lista Smart Backend",
     description:
-      "FPS multiplayer 1v1 no browser inspirado no CS2. Servidor autoritativo com validação de tiros via ray-AABB, client-side prediction, server reconciliation e entity interpolation. Renderização 3D com Three.js, sons procedurais via Web Audio API, sistema de rounds MR12 completo. Zero frameworks, zero assets externos.",
+      "Backend NestJS de um sistema de recomendação personalizada para app mobile de lista de compras. Implementa cinco algoritmos de recomendação — categoria favorita com score híbrido, co-ocorrência entre produtos, sugestões por lista atual, trending global e restock por intervalo de categoria — sem banco de dados, tudo em memória via arrays TypeScript. Inclui um dashboard interativo em tempo real que exibe o pipeline de eventos, a matriz de co-ocorrência e os cinco algoritmos lado a lado para diferentes usuários, tornando a personalização visualmente demonstrável.",
     descriptionEn:
-      "Browser-based 1v1 multiplayer FPS inspired by CS2. Authoritative server with ray-AABB hit validation, client-side prediction, server reconciliation and entity interpolation. 3D rendering with Three.js, procedural audio via Web Audio API, full MR12 round system. No frameworks, no external assets.",
+      "NestJS backend for a personalized recommendation system in a mobile grocery list app. Implements five recommendation algorithms — hybrid-score favorite category, product co-occurrence, current-list suggestions, global trending, and category-based restock — with no database, using in-memory TypeScript arrays. Ships with a real-time interactive dashboard showing the event pipeline, co-occurrence matrix, and all five algorithms live across multiple user contexts, making personalization visually demonstrable.",
+    image: "https://opengraph.githubassets.com/0fe3580010802d4268393c76ff972196587e6cab642812eb39e5f9105270b060/ckzwebber/lista-smart-backend",
+    technologies: ["NestJS", "TypeScript", "Node.js"],
+    techColors: ["bg-red-600/20 text-red-400", "bg-blue-600/20 text-blue-400", "bg-green-500/20 text-green-400"],
+    github: "https://github.com/ckzwebber/lista-smart-backend",
+    demo: null,
+    category: "backend",
+  },
+  {
+    title: "CS2 Arena",
+    description:
+      "FPS multiplayer no browser inspirado no CS2, com modos 1v1 e 5v5 completos. Servidor autoritativo com validação de tiros via ray-AABB, client-side prediction, server reconciliation e entity interpolation a 64 ticks. Renderização 3D com Three.js (modelos procedurais, sem assets externos), sistema de granadas (smoke, flash, HE) com física de trajetória e efeitos visuais, sistema de bomba C4 com plant/defuse, faca com backstab detection, pistola, death cam, nicknames, sons procedurais via Web Audio API e rounds MR12. Deploy na Hetzner com Nginx, PM2 e pipeline CI/CD via GitHub Actions.",
+    descriptionEn:
+      "Browser-based multiplayer FPS inspired by CS2, featuring full 1v1 and 5v5 game modes. Authoritative server with ray-AABB hit validation, client-side prediction, server reconciliation and entity interpolation at 64 ticks. 3D rendering with Three.js (procedural models, zero external assets), grenade system (smoke, flash, HE) with trajectory physics and visual effects, C4 bomb system with plant/defuse, knife with backstab detection, pistol, death cam, nicknames, procedural audio via Web Audio API and MR12 rounds. Deployed on Hetzner with Nginx, PM2 and CI/CD pipeline via GitHub Actions.",
     image: CSImg,
     technologies: ["Three.js", "Socket.IO", "Node.js", "JavaScript"],
     techColors: ["bg-gray-500/20 text-gray-300", "bg-gray-500/20 text-gray-300", "bg-green-500/20 text-green-400", "bg-yellow-500/20 text-yellow-400"],
-    github: "https://github.com/ckzwebber/cs",
-    demo: null,
+    github: null,
+    demo: "https://cs.cakowebber.dev",
     category: "fullstack",
   },
   {
@@ -108,19 +121,6 @@ export const projects = [
     category: "backend",
   },
   {
-    title: "Factorio Auto Sort",
-    description:
-      "Mod para Factorio em Lua que adiciona botão de ordenação automática ao abrir baús. Usa a API de eventos do jogo (on_gui_opened, on_gui_click, on_gui_closed) para gerenciar o ciclo de vida do botão e reordenar inventário.",
-    descriptionEn:
-      "Factorio mod written in Lua that adds an auto-sort button when opening chests. Uses the game's event API (on_gui_opened, on_gui_click, on_gui_closed) to manage button lifecycle and reorder inventory.",
-    image: "https://i.ytimg.com/vi/BqaAjgpsoW8/maxresdefault.jpg",
-    technologies: ["Lua", "Factorio API"],
-    techColors: ["bg-blue-700/20 text-blue-300", "bg-yellow-600/20 text-yellow-400"],
-    github: "https://github.com/ckzwebber/factorio-auto-sort-chest-mod",
-    demo: null,
-    category: "tools",
-  },
-  {
     title: "Lamborghini Project",
     description: "Site não-oficial da Lamborghini com páginas de modelos, informações da marca e contato. Projeto de estudo com foco em componentização React e design responsivo.",
     descriptionEn: "Unofficial Lamborghini website with model pages, brand info and contact. Study project focused on React componentization and responsive design.",
@@ -130,39 +130,6 @@ export const projects = [
     github: "https://github.com/ckzwebber/lamborghini-project",
     demo: "https://webberlamborghini.netlify.app/",
     category: "frontend",
-  },
-  {
-    title: "CLI Word PDF Counter",
-    description: "Ferramenta CLI em Rust para extração de texto e contagem de palavras frequentes em PDFs, com suporte a múltiplos arquivos e saída formatada no terminal.",
-    descriptionEn: "CLI tool built in Rust for text extraction and word frequency counting across PDF files, with multi-file support and formatted terminal output.",
-    image: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?q=80&w=2340&auto=format&fit=crop",
-    technologies: ["Rust", "CLI"],
-    techColors: ["bg-orange-600/20 text-orange-400", "bg-gray-500/20 text-gray-400"],
-    github: "https://github.com/ckzwebber/cli-word-pdf-counter",
-    demo: null,
-    category: "tools",
-  },
-  {
-    title: "VTEX Gift Generator",
-    description: "CLI interativo em TypeScript para operações de gift card na plataforma VTEX, consulta clientes por pedido, e-mail ou CPF/CNPJ e cria/credita gift cards em um único fluxo.",
-    descriptionEn: "Interactive CLI in TypeScript for VTEX gift card operations, look up customers by order, email or CPF/CNPJ, then create and credit gift cards in a single flow.",
-    image: "https://images.unsplash.com/photo-1608755728617-aefab37d2edd?q=80&w=2340&auto=format&fit=crop",
-    technologies: ["TypeScript", "Node.js", "REST API"],
-    techColors: ["bg-blue-600/20 text-blue-400", "bg-green-500/20 text-green-400", "bg-purple-500/20 text-purple-400"],
-    github: "https://github.com/ckzwebber/vtex-gift-generator",
-    demo: null,
-    category: "tools",
-  },
-  {
-    title: "VTEX Environment Migrator",
-    description: "CLI em TypeScript para migração de componentes de catálogo VTEX entre ambientes, com interface interativa e validação de dados.",
-    descriptionEn: "TypeScript CLI for migrating VTEX catalog components between environments, with interactive interface and data validation.",
-    image: "https://images.unsplash.com/photo-1615525137689-198778541af6?q=80&w=2340&auto=format&fit=crop",
-    technologies: ["TypeScript", "Node.js", "CLI"],
-    techColors: ["bg-blue-600/20 text-blue-400", "bg-green-500/20 text-green-400", "bg-gray-500/20 text-gray-400"],
-    github: "https://github.com/ckzwebber/vtex-environment-migrator",
-    demo: null,
-    category: "tools",
   },
   {
     title: "Wallet Watch",
@@ -176,15 +143,30 @@ export const projects = [
     category: "fullstack",
   },
   {
-    title: "Simples Nacional Status Checker",
-    description: "Script Python que lê uma planilha Excel, extrai CNPJs e consulta em lote a situação de cada empresa no Simples Nacional via API pública, exportando os resultados automaticamente.",
-    descriptionEn: "Python script that reads an Excel spreadsheet, extracts CNPJs and batch-queries each company's Simples Nacional status via public API, automatically exporting the results.",
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
-    technologies: ["Python", "API", "Excel"],
-    techColors: ["bg-blue-500/20 text-blue-400", "bg-green-500/20 text-green-400", "bg-green-600/20 text-green-500"],
-    github: "https://github.com/ckzwebber/simples-nacional-status-checker",
+    title: "Factorio AI Exporter",
+    description:
+      "Mod para Factorio 2.x em Lua que exporta o estado completo da fábrica em JSON estruturado + screenshots cobrindo toda a base. Varre todos os chunks explorados de forma assíncrona (5 chunks/tick via on_tick para evitar lag), coleta receitas, módulos, velocidades e bônus de produtividade por entidade, estatísticas de fluxo via LuaFlowStatistics em múltiplas janelas de tempo, e gera screenshots em grade com zoom adaptativo via take_screenshot. Output direto em script-output/ para colar em qualquer modelo de IA e receber análises contextualizadas de gargalos, layout e configuração de módulos.",
+    descriptionEn:
+      "Factorio 2.x Lua mod that exports the complete factory state as structured JSON + screenshots covering the entire base. Asynchronously scans all explored chunks (5 chunks/tick via on_tick to avoid lag), collects recipes, modules, speeds and productivity bonuses per entity, flow statistics via LuaFlowStatistics across multiple time windows, and generates grid screenshots with adaptive zoom via take_screenshot. Output goes directly to script-output/ to paste into any AI model for contextualized analysis of bottlenecks, layout and module configuration.",
+    image: "https://i.ytimg.com/vi/BqaAjgpsoW8/maxresdefault.jpg",
+    technologies: ["Lua", "Factorio API"],
+    techColors: ["bg-blue-700/20 text-blue-300", "bg-yellow-600/20 text-yellow-400"],
+    github: "https://github.com/ckzwebber/factorio-ai-exporter",
     demo: null,
-    category: "backend",
+    category: "tools",
+  },
+  {
+    title: "Factorio Auto Sort",
+    description:
+      "Mod para Factorio em Lua que adiciona botão de ordenação automática ao abrir baús. Usa a API de eventos do jogo (on_gui_opened, on_gui_click, on_gui_closed) para gerenciar o ciclo de vida do botão e reordenar inventário.",
+    descriptionEn:
+      "Factorio mod written in Lua that adds an auto-sort button when opening chests. Uses the game's event API (on_gui_opened, on_gui_click, on_gui_closed) to manage button lifecycle and reorder inventory.",
+    image: "https://i.ytimg.com/vi/BqaAjgpsoW8/maxresdefault.jpg",
+    technologies: ["Lua", "Factorio API"],
+    techColors: ["bg-blue-700/20 text-blue-300", "bg-yellow-600/20 text-yellow-400"],
+    github: "https://github.com/ckzwebber/factorio-auto-sort-chest-mod",
+    demo: null,
+    category: "tools",
   },
 ];
 

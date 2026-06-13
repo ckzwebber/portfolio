@@ -85,9 +85,9 @@ export default function ProjectsSection() {
         </div>
 
         {filteredProjects.length > 0 ? (
-          <div className="grid lg:grid-cols-[0.95fr_1.05fr] gap-6 md:gap-8 lg:gap-10 items-start">
+          <div className="grid lg:grid-cols-[1fr_1.6fr] gap-6 md:gap-8 lg:gap-10 items-start">
             <div className="panel reveal" data-reveal="slice">
-              <div className="space-y-2">
+              <div className="space-y-1">
                 {filteredProjects.map((project, index) => {
                   const isActive = index === activeIndex;
 
@@ -98,25 +98,18 @@ export default function ProjectsSection() {
                       onMouseEnter={() => setActiveIndex(index)}
                       onFocus={() => setActiveIndex(index)}
                       onClick={() => setActiveIndex(index)}
-                      className={`w-full text-left border px-3 md:px-4 py-4 transition-colors ${isActive ? "border-primary bg-primary/12" : "border-border bg-secondary/45 hover:bg-primary/8"}`}
+                      className={`w-full text-left border px-3 py-3 transition-colors ${isActive ? "border-primary bg-primary/12" : "border-border bg-secondary/45 hover:bg-primary/8"}`}
                       data-testid={`project-card-${index}`}>
-                      <div className="grid grid-cols-[auto_1fr] gap-3 md:gap-4 items-start">
-                        <span className={`font-mono text-xs md:text-sm mt-1 ${isActive ? "text-primary" : "text-text-light"}`}>{String(index + 1).padStart(2, "0")}</span>
-                        <div>
-                          <h3 className="text-xl md:text-2xl leading-tight glitch-hover" data-text={project.title} data-testid={`project-title-${index}`}>
-                            {project.title}
-                          </h3>
-                          <p className="text-sm text-text-light mt-2 leading-relaxed" data-testid={`project-description-${index}`}>
-                            {i18n.language === "en" ? project.descriptionEn : project.description}
-                          </p>
-                          <div className="flex flex-wrap gap-2 mt-3">
-                            {project.technologies.slice(0, 3).map((tech, techIndex) => (
-                              <span key={tech} className={`px-2.5 py-1 border border-border text-[11px] uppercase font-mono ${project.techColors[techIndex]}`} data-testid={`project-tech-${index}-${techIndex}`}>
-                                {tech}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
+                      <div className="flex items-center gap-3 min-w-0">
+                        <span className={`font-mono text-xs shrink-0 w-5 ${isActive ? "text-primary" : "text-text-light/50"}`} data-testid={`project-title-${index}`}>
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+                        <span className={`flex-1 text-sm truncate glitch-hover transition-colors ${isActive ? "text-foreground" : "text-text-light"}`} data-text={project.title} data-testid={`project-description-${index}`}>
+                          {project.title}
+                        </span>
+                        <span className={`font-mono text-[10px] uppercase tracking-[0.12em] px-2 py-0.5 border shrink-0 transition-colors ${isActive ? "border-primary/60 text-primary" : "border-border/50 text-text-light/40"}`}>
+                          {project.category}
+                        </span>
                       </div>
                     </button>
                   );
@@ -130,7 +123,7 @@ export default function ProjectsSection() {
                 initial={{ opacity: 0, y: 26 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-                className="panel reveal h-full flex flex-col"
+                className="panel reveal flex flex-col sticky top-24 self-start"
                 data-reveal="zoom">
                 <div className="relative overflow-hidden border border-border mb-5">
                   <img src={activeProject.image} alt={t("project-image-alt", { title: activeProject.title })} className="w-full h-[260px] md:h-[340px] object-cover" data-testid={`project-image-${activeIndex}`} />
