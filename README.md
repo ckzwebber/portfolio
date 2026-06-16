@@ -1,8 +1,8 @@
-# webber.portfolio
+# cakowebber.dev
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e26b54e8-aa4c-4f8d-9817-0c9de91a327d/deploy-status)](https://app.netlify.com/projects/webberportfolio/deploys)
 
-Personal portfolio — live at [cakowebber.dev](https://cakowebber.dev/)
+Personal portfolio, live at [cakowebber.dev](https://cakowebber.dev/)
 
 ---
 
