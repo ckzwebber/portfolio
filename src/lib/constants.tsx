@@ -12,7 +12,7 @@ export const personalInfo = {
   education: "Ciência da Computação - UNESC (em andamento)",
   linkedin: "https://www.linkedin.com/in/cakowebber/",
   github: "https://github.com/ckzwebber",
-  portfolio: "https://webberportfolio.netlify.app/",
+  portfolio: "https://cakowebber.dev/",
   email: "kacowebber11@unesc.net",
 };
 
