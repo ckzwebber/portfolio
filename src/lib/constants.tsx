@@ -53,7 +53,7 @@ export const projects = [
     image: CentralComprasImg,
     technologies: ["Next.js", "Express", "TypeScript", "PostgreSQL", "Tailwind"],
     techColors: ["bg-gray-500/20 text-gray-300", "bg-red-600/20 text-red-400", "bg-blue-600/20 text-blue-400", "bg-blue-500/20 text-blue-400", "bg-teal-500/20 text-teal-400"],
-    github: "https://github.com/ckzwebber/unesc-projeto-central-compras-frontend",
+    github: "https://github.com/ckzwebber/central-compras-web",
     demo: "https://central-compras.vercel.app",
     category: "fullstack",
   },
@@ -71,7 +71,7 @@ export const projects = [
     category: "backend",
   },
   {
-    title: "CS2 Arena",
+    title: "CS Web",
     description:
       "FPS multiplayer no browser inspirado no CS2, com modos 1v1 e 5v5 completos. Servidor autoritativo com validação de tiros via ray-AABB, client-side prediction, server reconciliation e entity interpolation a 64 ticks. Renderização 3D com Three.js (modelos procedurais, sem assets externos), sistema de granadas (smoke, flash, HE) com física de trajetória e efeitos visuais, sistema de bomba C4 com plant/defuse, faca com backstab detection, pistola, death cam, nicknames, sons procedurais via Web Audio API e rounds MR12. Deploy na Hetzner com Nginx, PM2 e pipeline CI/CD via GitHub Actions.",
     descriptionEn:
@@ -92,7 +92,7 @@ export const projects = [
     image: ArenaImg,
     technologies: ["React", "TypeScript", "NestJS", "Socket.IO", "Canvas"],
     techColors: ["bg-cyan-500/20 text-cyan-400", "bg-blue-600/20 text-blue-400", "bg-red-600/20 text-red-400", "bg-gray-500/20 text-gray-300", "bg-purple-500/20 text-purple-400"],
-    github: "https://github.com/ckzwebber/websocket-game-front",
+    github: "https://github.com/ckzwebber/arena-client",
     demo: "https://websocket-game-front.vercel.app/",
     category: "fullstack",
   },
@@ -121,13 +121,13 @@ export const projects = [
     category: "backend",
   },
   {
-    title: "Lamborghini Project",
+    title: "Lamborghini Fansite",
     description: "Site não-oficial da Lamborghini com páginas de modelos, informações da marca e contato. Projeto de estudo com foco em componentização React e design responsivo.",
     descriptionEn: "Unofficial Lamborghini website with model pages, brand info and contact. Study project focused on React componentization and responsive design.",
     image: LamborghiniImg,
     technologies: ["React", "JavaScript", "CSS"],
     techColors: ["bg-cyan-500/20 text-cyan-400", "bg-yellow-500/20 text-yellow-400", "bg-blue-500/20 text-blue-400"],
-    github: "https://github.com/ckzwebber/lamborghini-project",
+    github: "https://github.com/ckzwebber/lamborghini-fansite",
     demo: "https://webberlamborghini.netlify.app/",
     category: "frontend",
   },
