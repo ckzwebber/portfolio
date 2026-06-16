@@ -58,15 +58,15 @@ export const projects = [
     category: "fullstack",
   },
   {
-    title: "Lista Smart Backend",
+    title: "Cartwise",
     description:
       "Backend NestJS de um sistema de recomendação personalizada para app mobile de lista de compras. Implementa cinco algoritmos de recomendação — categoria favorita com score híbrido, co-ocorrência entre produtos, sugestões por lista atual, trending global e restock por intervalo de categoria — sem banco de dados, tudo em memória via arrays TypeScript. Inclui um dashboard interativo em tempo real que exibe o pipeline de eventos, a matriz de co-ocorrência e os cinco algoritmos lado a lado para diferentes usuários, tornando a personalização visualmente demonstrável.",
     descriptionEn:
       "NestJS backend for a personalized recommendation system in a mobile grocery list app. Implements five recommendation algorithms — hybrid-score favorite category, product co-occurrence, current-list suggestions, global trending, and category-based restock — with no database, using in-memory TypeScript arrays. Ships with a real-time interactive dashboard showing the event pipeline, co-occurrence matrix, and all five algorithms live across multiple user contexts, making personalization visually demonstrable.",
-    image: "https://opengraph.githubassets.com/0fe3580010802d4268393c76ff972196587e6cab642812eb39e5f9105270b060/ckzwebber/lista-smart-backend",
+    image: "https://opengraph.githubassets.com/0fe3580010802d4268393c76ff972196587e6cab642812eb39e5f9105270b060/ckzwebber/cartwise",
     technologies: ["NestJS", "TypeScript", "Node.js"],
     techColors: ["bg-red-600/20 text-red-400", "bg-blue-600/20 text-blue-400", "bg-green-500/20 text-green-400"],
-    github: "https://github.com/ckzwebber/lista-smart-backend",
+    github: "https://github.com/ckzwebber/cartwise",
     demo: null,
     category: "backend",
   },
