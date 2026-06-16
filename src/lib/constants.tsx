@@ -297,9 +297,9 @@ export const contactInfo = [
   },
   {
     label: "Portfolio",
-    value: "webberportfolio.netlify.app",
-    copyValue: "https://webberportfolio.netlify.app/",
-    href: "https://webberportfolio.netlify.app/",
+    value: "cakowebber.dev",
+    copyValue: "https://cakowebber.dev/",
+    href: "https://cakowebber.dev/",
     icon: <Globe className="text-primary text-xl" />,
   },
 ];
